@@ -1,0 +1,41 @@
+.button {
+  font-family: $main-font;
+  background-color: $yellow-button;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include font-parametrs(17px, $navy-blue, 700, 30px);
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-radius: 25px;
+  border: none;
+}
+
+.button--more {
+  display: block;
+  border: none;
+  border-radius: 20px;
+  width: 274px;
+  text-transform: capitalize;
+  position: relative;
+  @include font-parametrs(24px, $navy-blue, 700, 24px);
+  span {
+    display: block;
+    padding-top: 19px;
+    padding-bottom: 18px;
+    padding-right: 126px;
+    padding-left: 33px;
+  }
+    &::after {
+      position: absolute;
+      top: 34px;
+      left: 228px;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7px 0 7px 10px;
+      border-color: transparent transparent transparent $navy-blue;
+  }
+}

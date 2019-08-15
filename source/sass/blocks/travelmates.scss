@@ -1,0 +1,307 @@
+.travelmates {
+  background-color: $navy-blue;
+}
+
+.travelmates__wrapper {
+  width: 270px;
+  margin: 0 auto;
+  padding-bottom: 29px;
+}
+
+.travelmates__title {
+  padding-top: 32px;
+  padding-left: 24px;
+  @include font-parametrs(24px, $orange-title, 700, 24px);
+}
+
+.travelmates__text {
+  @include font-parametrs(16px, $white, 300, 22px);
+  padding-left: 24px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+  &--call {
+    font-weight: 700;
+    margin-bottom: 57px;
+  }
+}
+
+.travelmates__list {
+  @include list-reset;
+}
+
+.travelmates__item {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  &:last-child {
+    margin-bottom: 22px;
+  }
+}
+
+.travelmates__image {
+  border-radius: 10px 10px 0 0;
+  width: 270px;
+  height: 270px;
+  margin: 0;
+  padding: 0;
+}
+
+.visit-country__item {
+  background-image: url(../img/flag-seychelles.svg);
+}
+
+.travelmates__description {
+  width: 270px;
+  background-color: $white;
+  position: relative;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 22px;
+}
+
+.visit-country {
+  @include list-reset;
+  position: absolute;
+  display: flex;
+  width: 143px;
+  justify-content: space-between;
+  top: -11px;
+  left: 63px;
+  &--two {
+    width: 87px;
+    left: 93px;
+  }
+}
+
+.travelmates__name {
+  margin-top: 26px;
+  @include font-parametrs(21px, $navy-blue, 700, 21px);
+  text-align: center;
+  position: relative;
+  margin-bottom: 15px;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $status--ofline;
+    @include wh(5px, 5px);
+    border-radius: 50%;
+    top: 7px;
+    left: 53px;
+  }
+}
+
+.travelmates__tags {
+  width: 180px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  @include font-parametrs(16px, #444, 400, 18px);
+  margin-bottom: 15px;
+}
+
+.ways-to-travel {
+  @include list-reset;
+  display: flex;
+  width: 120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.ways-to-travel__item--current {
+  opacity: 0.2;
+}
+
+.ways-to-travel__item--plane {
+  @include wh(19px, 21px);
+}
+
+.ways-to-travel__item--bus {
+  @include wh(17px, 21px);
+}
+
+.ways-to-travel__item--bike {
+  @include wh(24px, 21px);
+}
+
+.ways-to-travel__item--run {
+  @include wh(20px, 21px);
+}
+
+
+.ways-to-travel__item svg {
+  fill: $navy-blue;
+}
+
+.travelmates__button {
+  width: 270px;
+  border-radius: 10px;
+  span {
+    text-transform: none;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 23px;
+  }
+    &::after {
+      left: 237px;
+      top: 24px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+  .travelmates {
+    background-color: $navy-blue;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .travelmates__wrapper {
+    width: 688px;
+    padding-bottom: 90px;
+
+  }
+
+  .travelmates__title {
+    font-size: 45px;
+    width: 220px;
+    padding: 0;
+    padding-top: 141px;
+    margin: 0;
+    padding-left: 33px;
+    margin-bottom: 66px;
+  }
+
+  .travelmates__text {
+    font-size: 28px;
+    line-height: 33px;
+    width: 425px;
+    padding: 0;
+    margin: 0;
+    padding-left: 35px;
+    margin-bottom: 41px;
+    &--call {
+      line-height: 25px;
+      width: 252px;
+      font-size: 21px;
+      margin-bottom: 58px;
+    }
+  }
+
+  .travelmates__list {
+    width: 618px;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 58px;
+  }
+
+  .travelmates__item {
+    margin-right: 48px;
+  }
+
+  .travelmates__image {
+    border-radius: 20px 20px 0 0;
+    width: 285px;
+    height: 285px;
+  }
+
+  .travelmates__description {
+    width: 285px;
+    border-radius: 0 0 20px 20px;
+    padding-bottom: 33px;
+  }
+
+  .travelmates__name {
+    margin-top: 30px;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 21px;
+  }
+
+  .travelmates__tags {
+    width: 225px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .visit-country {
+    top: -12px;
+    left: 72px;
+  }
+
+  .travelmates__button {
+    margin-left: 35px;
+    width: 618px;
+
+
+    text-align: left;
+    border-radius: 20px;
+    span {
+      line-height: 24px;
+      font-size: 24px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 34px;
+    }
+    &::after {
+      left: 573px;
+      top: 33px;
+    }
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .travelmates__wrapper {
+    width: 1320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 113px;
+  }
+
+  .travelmates-text__wrapper {
+    width: 630px;
+    padding: 0;
+    margin: 0;
+    order: 1;
+    padding-top: 0px;
+    padding-left: 37px;
+  }
+
+  .travelmates__title {
+    padding-top: 139px;
+  }
+
+  .travelmates__list {
+    width: 630px;
+    order: 2;
+    padding: 0;
+    margin: 0;
+    margin-top: 133px;
+  }
+
+  .travelmates__item {
+    margin-right: 60px;
+  }
+
+  .travelmates__button {
+    height: 61px;
+    margin-top: -102px;
+    margin-left: 71px;
+    width: 280px;
+    order: 3;
+    span {
+      font-size: 24px;
+      padding-right: 0;
+    }
+    &::after {
+      top: 34px;
+      left: 234px;
+    }
+  }
+}
+
