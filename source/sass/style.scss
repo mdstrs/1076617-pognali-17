@@ -1,0 +1,52 @@
+@import "normalize";
+@import "global/fonts.scss";
+@import "global/mixins.scss";
+@import "global/vars.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-menu.scss";
+@import "blocks/button.scss";
+@import "blocks/contacts.scss";
+@import "blocks/social-list.scss";
+@import "blocks/connection.scss";
+@import "blocks/page-title.scss";
+@import "blocks/review.scss";
+@import "blocks/intro.scss";
+@import "blocks/about.scss";
+@import "blocks/country.scss";
+@import "blocks/travelmates.scss";
+@import "blocks/rates.scss";
+@import "blocks/business-rates.scss";
+@import "blocks/cta-form.scss";
+@import "blocks/location.scss";
+@import "blocks/map.scss";
+@import "blocks/main-footer.scss";
+
+body {
+  background-color: $navy-blue;
+  background-image: url("../img/globe-back-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

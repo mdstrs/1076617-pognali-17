@@ -1,0 +1,24 @@
+@mixin font-parametrs($size, $colour, $weight,  $lh) {
+  font-family: $main-font;
+  font-size: $size;
+  color: $colour;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin pseudo($content: "", $pos: absolute, $display: block) {
+  content: $content;
+  position: $pos;
+  display: $display;
+}
+
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}

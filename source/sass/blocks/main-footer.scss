@@ -1,0 +1,52 @@
+.main-footer {
+  background-color: $white;
+}
+
+.main-footer__logo-image {
+  padding-top: 3px;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 47px;
+}
+
+.main-footer__social-list {
+  display: flex;
+  padding-left: 156px;
+  margin-bottom: 52px;
+}
+
+
+.main-footer__social-list .social-item {
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  position: relative;
+  fill: $navy-blue;
+  margin-right: 28px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: #ffd74b;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: -10px;
+    left: -16px;
+    z-index: -1;
+  }
+}
+
+.main-footer__social-list .social-item:nth-child(2)::after {
+  left: -11px;
+}
+
+.main-footer__social-list .social-item--fb {
+  padding-top: 3px;
+  padding-left: 1px;
+}
+
+.main-footer__social-list .social-item--vk {
+  padding-top: 6px;
+}

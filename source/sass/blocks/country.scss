@@ -1,0 +1,301 @@
+.country {
+  background-color: #edeff6;
+  padding-bottom: 50px;
+  border-radius: 0 0 30px 30px;
+}
+
+.country__wrapper {
+  width: 270px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.country__title {
+  padding-top: 72px;
+  padding-left: 24px;
+
+  @include font-parametrs(24px, $orange-title, 700, 24px);
+  margin-bottom: 20px;
+}
+
+.country__title-description {
+  @include font-parametrs(16px, #444444, 300, 22px);
+  width: 195px;
+  padding-left: 24px;
+  margin-bottom: 59px;
+}
+
+.country__list {
+  @include list-reset;
+  margin-bottom: 15px;
+}
+
+.country__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+
+  &:nth-child(2) .country__title--review {
+    margin-right: 96px;
+  }
+
+  &:nth-child(3) .country__title--review {
+    margin-right: 133px;
+  }
+}
+
+.country__image img {
+  border-radius: 10px 10px 0 0;
+}
+
+.counrty__review {
+  background-color: $white;
+  margin-top: -11px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.country__title--review {
+  padding-top: 6px;
+  padding-left: 24px;
+
+  @include font-parametrs(21px, $navy-blue, 700, 21px);
+  margin-right: 101px;
+}
+
+.country__text {
+  display: block;
+  margin-top: -20px;
+  padding-left: 24px;
+  padding-bottom: 23px;
+
+  @include font-parametrs(16px, #444444, 500, 18px);
+  opacity: 0.3;
+}
+
+.country__counter {
+  @include font-parametrs(16px, #444444, 500, 30px);
+  text-transform: uppercase;
+  padding-top: 24px;
+  opacity: 0.3;
+  position: relative;
+
+  &::before {
+    opacity: 0.2;
+    position: absolute;
+    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 20' width='11' height='11' style='enable-background:new 0 0 20 20;' xml:space='preserve'%3E%3Cg id='icons'%3E%3Cg id='user'%3E%3Cellipse fill='%23192144' cx='10' cy='6' rx='5' ry='6'/%3E%3Cpath fill='%23192144' d='M19.8,17.1c-0.9-1.8-2.6-3.3-4.8-4.2c-0.6-0.2-1.3-0.2-1.8,0.1c-1,0.6-2,0.9-3.2,0.9S7.8,13.6,6.8,13 c-0.5-0.2-1.2-0.3-1.8,0c-2.2,0.9-3.9,2.4-4.8,4.2C-0.5,18.5,0.6,20,2.1,20h15.8C19.4,20,20.5,18.5,19.8,17.1z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    top: 24px;
+    left: -18px;
+  }
+}
+
+.country__button {
+  order: 3;
+  font-size: 18px;
+  line-height: 18px;
+  border-radius: 10px;
+  width: 270px;
+  text-transform: none;
+
+  span {
+    padding-top: 13px;
+    padding-bottom: 11px;
+    padding-left: 10px;
+  }
+
+  &::after {
+    top: 24px;
+    left: 237px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .country__wrapper {
+    width: 688px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .country__title {
+    padding-left: 33px;
+    padding-top: 84px;
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 55px;
+  }
+
+  .country__title-description {
+    padding-left: 35px;
+    font-size: 28px;
+    line-height: 33px;
+    width: 345px;
+    position: relative;
+    margin-bottom: 107px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/flags-back@1x.png");
+      width: 289px;
+      height: 575px;
+      top: -92px;
+      left: 399px;
+    }
+  }
+
+  .country__list {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 48px;
+  }
+
+  .country__item {
+    flex-direction: row-reverse;
+  }
+
+  .country__image {
+    padding: 0;
+    margin: 0;
+    height: 140px;
+    width: 186px;
+    z-index: 1;
+    border-radius: 0 20px 20px 0;
+    margin-left: -35px;
+    margin-right: 35px;
+  }
+
+  .counrty__review {
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+    width: 500px;
+    border-radius: 20px;
+    margin-left: 35px;
+    flex-direction: column;
+  }
+
+  .country__title--review {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    padding-top: 31px;
+    padding-left: 30px;
+    padding-bottom: 4px;
+  }
+
+  .country__text {
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+    font-size: 20px;
+    line-height: 18px;
+    margin-bottom: 17px;
+  }
+
+  .country__counter {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 60px;
+
+    &::before {
+      top: 3px;
+      left: 30px;
+      content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 20' height='20' width='20' style='enable-background:new 0 0 20 20;' xml:space='preserve'%3E%3Cg id='icons'%3E%3Cg id='user'%3E%3Cellipse fill='%23192144' cx='10' cy='6' rx='5' ry='6'/%3E%3Cpath fill='%23192144' d='M19.8,17.1c-0.9-1.8-2.6-3.3-4.8-4.2c-0.6-0.2-1.3-0.2-1.8,0.1c-1,0.6-2,0.9-3.2,0.9S7.8,13.6,6.8,13 c-0.5-0.2-1.2-0.3-1.8,0c-2.2,0.9-3.9,2.4-4.8,4.2C-0.5,18.5,0.6,20,2.1,20h15.8C19.4,20,20.5,18.5,19.8,17.1z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+
+  .country__button {
+    margin-left: 35px;
+    width: 618px;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: left;
+    border-radius: 20px;
+
+    span {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 34px;
+    }
+
+    &::after {
+      left: 573px;
+      top: 33px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country__wrapper {
+    width: 1360px;
+    margin: 0 auto;
+    flex-direction: row;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    padding-bottom: 89px;
+  }
+
+  .flex {
+    order: 2;
+    width: 600px;
+    margin-left: auto;
+  }
+
+  .country__list {
+    order: 1;
+    padding-left: 56px;
+    padding-top: 161px;
+    width: 629px;
+    margin-bottom: 0;
+  }
+
+  .country__title--review {
+    padding-top: 25px;
+  }
+
+  .country__title {
+    padding-top: 130px;
+    padding-left: 62px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .country__title-description {
+    padding-left: 62px;
+    z-index: 1;
+    position: relative;
+
+    &::after {
+      z-index: -1;
+      top: -180px;
+      left: 290px;
+    }
+  }
+
+  .country__button {
+    margin-left: auto;
+    width: 274px;
+    z-index: 1;
+    justify-content: flex-end;
+    order: 3;
+    margin-top: -81px;
+    margin-right: 262px;
+
+    span {
+      font-size: 24px;
+      padding-right: 0;
+    }
+
+    &::after {
+      top: 34px;
+      left: 228px;
+    }
+  }
+}

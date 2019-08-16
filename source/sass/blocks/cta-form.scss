@@ -1,0 +1,194 @@
+.cta {
+  background-color: #192144;
+  border-radius: 0 0 30px 30px;
+}
+
+.cta__wrapper {
+  width: 270px;
+  margin: 0 auto;
+  padding-bottom: 1px;
+}
+
+.cta__title {
+  padding-top: 53px;
+
+  @include font-parametrs(24px, $orange-title, 700, 24px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cta__text {
+  width: 200px;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+
+  @include font-parametrs(16px, $white, 300, 22px);
+  margin-bottom: 28px;
+}
+
+.cta__link {
+  text-decoration: underline;
+  color: #ffd74b;
+}
+
+.cta-form {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.cta-form__input {
+  padding-top: 23px;
+  padding-bottom: 21px;
+  padding-left: 24px;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  border: none;
+}
+
+.cta-form__button {
+  font-size: 0;
+  width: 77px;
+  border-radius: 10px;
+  margin-left: -10px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 24px;
+    left: 27px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 10px;
+    border-color: transparent transparent transparent $navy-blue;
+  }
+}
+
+.cta-form__input::placeholder {
+  @include font-parametrs(18px, #444, 700, 18px);
+}
+
+.cta__text--question {
+  text-align: center;
+  display: block;
+}
+
+.cta__contacts-list {
+  margin-left: 61px;
+
+  a {
+    color: #ffd74b;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .cta__wrapper {
+    width: 688px;
+    margin: 0 auto;
+  }
+
+  .cta__title {
+    padding-left: 2px;
+    padding-top: 47px;
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 56px;
+  }
+
+  .cta__text {
+    width: 90%;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .cta-form {
+    margin-bottom: 59px;
+  }
+
+  .cta-form__input {
+    width: 566px;
+    margin: 0 auto;
+    margin-left: 35px;
+    padding-top: 31px;
+    padding-left: 34px;
+    padding-bottom: 31px;
+    border-radius: 20px 0 0 20px;
+
+    &::placeholder {
+      font-size: 24px;
+    }
+  }
+
+  .cta-form__button {
+    width: 88px;
+    border-radius: 0 20px 20px 0;
+    margin-right: 35px;
+    margin-left: -15px;
+
+    &::before {
+      top: 34px;
+      left: 36px;
+    }
+  }
+
+  .cta__contacts-list {
+    margin-left: 126px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cta__wrapper {
+    width: 1360px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+
+  .cta__title {
+    padding-top: 69px;
+  }
+
+  .cta__text {
+    width: 650px;
+    margin-bottom: 59px;
+  }
+
+  .cta-form {
+    margin-bottom: 67px;
+  }
+
+  .cta-form__input {
+    margin-left: 92px;
+    width: 850px;
+  }
+
+  .cta-form__button {
+    width: 337px;
+    margin: 0;
+    margin-right: 94px;
+    padding-left: 36px;
+    text-align: left;
+    font-size: 24px;
+    text-transform: capitalize;
+
+    &::before {
+      top: 33px;
+      left: 279px;
+    }
+  }
+
+  .cta__text--question {
+    margin-bottom: 77px;
+  }
+
+  .cta__contacts-list {
+    width: 746px;
+    margin: 0 auto;
+    padding-left: 115px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
