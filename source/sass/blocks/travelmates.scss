@@ -11,6 +11,7 @@
 .travelmates__title {
   padding-top: 32px;
   padding-left: 24px;
+
   @include font-parametrs(24px, $orange-title, 700, 24px);
 }
 
@@ -19,6 +20,7 @@
   padding-left: 24px;
   padding-right: 30px;
   margin-bottom: 20px;
+
   &--call {
     font-weight: 700;
     margin-bottom: 57px;
@@ -34,6 +36,7 @@
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+
   &:last-child {
     margin-bottom: 22px;
   }
@@ -48,7 +51,7 @@
 }
 
 .visit-country__item {
-  background-image: url(../img/flag-seychelles.svg);
+  background-image: url("../img/flag-seychelles.svg");
 }
 
 .travelmates__description {
@@ -67,6 +70,7 @@
   justify-content: space-between;
   top: -11px;
   left: 63px;
+
   &--two {
     width: 87px;
     left: 93px;
@@ -75,14 +79,17 @@
 
 .travelmates__name {
   margin-top: 26px;
+
   @include font-parametrs(21px, $navy-blue, 700, 21px);
   text-align: center;
   position: relative;
   margin-bottom: 15px;
+
   &::before {
     position: absolute;
     content: "";
     background-color: $status--ofline;
+
     @include wh(5px, 5px);
     border-radius: 50%;
     top: 7px;
@@ -95,6 +102,7 @@
   text-align: center;
   margin: 0 auto;
   display: block;
+
   @include font-parametrs(16px, #444, 400, 18px);
   margin-bottom: 15px;
 }
@@ -104,7 +112,6 @@
   display: flex;
   width: 120px;
   margin: 0 auto;
-  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -129,7 +136,6 @@
   @include wh(20px, 21px);
 }
 
-
 .ways-to-travel__item svg {
   fill: $navy-blue;
 }
@@ -137,6 +143,7 @@
 .travelmates__button {
   width: 270px;
   border-radius: 10px;
+
   span {
     text-transform: none;
     font-size: 18px;
@@ -146,10 +153,11 @@
     padding-bottom: 9px;
     padding-left: 23px;
   }
-    &::after {
-      left: 237px;
-      top: 24px;
-    }
+
+  &::after {
+    left: 237px;
+    top: 24px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -161,7 +169,6 @@
   .travelmates__wrapper {
     width: 688px;
     padding-bottom: 90px;
-
   }
 
   .travelmates__title {
@@ -180,8 +187,10 @@
     width: 425px;
     padding: 0;
     margin: 0;
+
     padding-left: 35px;
     margin-bottom: 41px;
+
     &--call {
       line-height: 25px;
       width: 252px;
@@ -235,10 +244,9 @@
   .travelmates__button {
     margin-left: 35px;
     width: 618px;
-
-
     text-align: left;
     border-radius: 20px;
+
     span {
       line-height: 24px;
       font-size: 24px;
@@ -246,12 +254,12 @@
       padding-bottom: 18px;
       padding-left: 34px;
     }
+
     &::after {
       left: 573px;
       top: 33px;
     }
   }
-
 }
 
 @media (min-width: $desktop-width) {
@@ -268,7 +276,7 @@
     padding: 0;
     margin: 0;
     order: 1;
-    padding-top: 0px;
+    padding-top: 0;
     padding-left: 37px;
   }
 
@@ -294,14 +302,15 @@
     margin-left: 71px;
     width: 280px;
     order: 3;
+
     span {
       font-size: 24px;
       padding-right: 0;
     }
+
     &::after {
       top: 34px;
       left: 234px;
     }
   }
 }
-

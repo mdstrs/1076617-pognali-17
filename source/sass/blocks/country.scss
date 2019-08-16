@@ -14,12 +14,13 @@
 .country__title {
   padding-top: 72px;
   padding-left: 24px;
+
   @include font-parametrs(24px, $orange-title, 700, 24px);
   margin-bottom: 20px;
 }
 
 .country__title-description {
-  @include font-parametrs(16px, #444, 300, 22px);
+  @include font-parametrs(16px, #444444, 300, 22px);
   width: 195px;
   padding-left: 24px;
   margin-bottom: 59px;
@@ -35,9 +36,11 @@
   flex-direction: column;
   margin-bottom: 10px;
   position: relative;
+
   &:nth-child(2) .country__title--review {
     margin-right: 96px;
   }
+
   &:nth-child(3) .country__title--review {
     margin-right: 133px;
   }
@@ -57,6 +60,7 @@
 .country__title--review {
   padding-top: 6px;
   padding-left: 24px;
+
   @include font-parametrs(21px, $navy-blue, 700, 21px);
   margin-right: 101px;
 }
@@ -66,16 +70,18 @@
   margin-top: -20px;
   padding-left: 24px;
   padding-bottom: 23px;
-  @include font-parametrs(16px, #444, 500, 18px);
+
+  @include font-parametrs(16px, #444444, 500, 18px);
   opacity: 0.3;
 }
 
 .country__counter {
-  @include font-parametrs(16px, #444, 500, 30px);
+  @include font-parametrs(16px, #444444, 500, 30px);
   text-transform: uppercase;
   padding-top: 24px;
   opacity: 0.3;
   position: relative;
+
   &::before {
     opacity: 0.2;
     position: absolute;
@@ -92,13 +98,14 @@
   border-radius: 10px;
   width: 270px;
   text-transform: none;
-  order: 3;
+
   span {
     padding-top: 13px;
     padding-bottom: 11px;
     padding-left: 10px;
   }
-    &::after {
+
+  &::after {
     top: 24px;
     left: 237px;
   }
@@ -128,19 +135,17 @@
     width: 345px;
     position: relative;
     margin-bottom: 107px;
+
     &::after {
       position: absolute;
       content: "";
-      background-image: url(../img/flags-back@1x.png);
+      background-image: url("../img/flags-back@1x.png");
       width: 289px;
       height: 575px;
       top: -92px;
       left: 399px;
     }
   }
-
-
-
 
   .country__list {
     padding: 0;
@@ -198,6 +203,7 @@
     font-size: 20px;
     line-height: 30px;
     padding-left: 60px;
+
     &::before {
       top: 3px;
       left: 30px;
@@ -212,11 +218,13 @@
     line-height: 24px;
     text-align: left;
     border-radius: 20px;
+
     span {
       padding-top: 18px;
       padding-bottom: 18px;
       padding-left: 34px;
     }
+
     &::after {
       left: 573px;
       top: 33px;
@@ -239,7 +247,6 @@
     width: 600px;
     margin-left: auto;
   }
-
 
   .country__list {
     order: 1;
@@ -264,6 +271,7 @@
     padding-left: 62px;
     z-index: 1;
     position: relative;
+
     &::after {
       z-index: -1;
       top: -180px;
@@ -279,10 +287,12 @@
     order: 3;
     margin-top: -81px;
     margin-right: 262px;
+
     span {
       font-size: 24px;
       padding-right: 0;
     }
+
     &::after {
       top: 34px;
       left: 228px;

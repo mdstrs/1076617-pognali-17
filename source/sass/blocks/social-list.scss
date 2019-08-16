@@ -8,10 +8,13 @@
 
 .social-item--vk {
   @include wh(23px, 12px);
+  padding-top: 4px;
+  padding-left: 7px;
 }
 
 .social-item--inst {
   @include wh(18px, 18px);
+  padding-top: 2px;
 }
 
 .page-header--active .social-list {
@@ -25,15 +28,6 @@
 
 .social-list img {
   opacity: 0.3;
-}
-
-.social-item--vk {
-  padding-top: 4px;
-  padding-left: 7px;
-}
-
-.social-item--inst {
-  padding-top: 2px;
 }
 
 .page-header__social-list {
@@ -60,13 +54,11 @@
     padding-top: 3px;
     padding-right: 3px;
   }
+
   .social-item--inst img {
     @include wh(24px, 24px);
   }
 }
-
-
-
 
 @media (min-width: $desktop-width) {
   .page-header--active .page-header__social-list {
@@ -75,4 +67,3 @@
     padding: 0;
   }
 }
-

@@ -7,6 +7,7 @@
 .main-menu a {
   text-decoration: none;
   text-transform: uppercase;
+
   @include font-parametrs(30px, $navy-blue, 500, 36px);
 }
 
@@ -26,6 +27,7 @@
   height: 11px;
   top: 30px;
   background-color: transparent;
+
   &::before {
     top: 0;
     left: 0;
@@ -33,9 +35,10 @@
     height: 3px;
     position: absolute;
     content: "";
-    background-color: #ccc;
+    background-color: #cccccc;
     transition: 0.5s;
   }
+
   &::after {
     top: 8px;
     left: 0;
@@ -43,7 +46,7 @@
     height: 3px;
     position: absolute;
     content: "";
-    background-color: #ccc;
+    background-color: #cccccc;
     transition: 0.5s;
   }
 }
@@ -59,6 +62,7 @@
 .page-header--active .main-menu__button {
   order: 2;
   top: 35px;
+
   &::before {
     transform: rotate(45deg);
     transition: 0.5s;
@@ -67,12 +71,10 @@
   &::after {
     top: 0;
     transform: rotate(135deg);
-    background-color: #ccc;
+    background-color: #cccccc;
     transition: 0.5s;
   }
-
 }
-
 
 @media (min-width: 768px) {
   //Общие стили main-menu (планештная версия)
@@ -120,6 +122,7 @@
     margin-top: 62px;
     padding-left: 13px;
     margin-right: 110px;
+
     &::before {
       position: absolute;
       content: "";
@@ -131,6 +134,7 @@
       left: -92px;
     }
   }
+
   .page-header .main-menu__list {
     display: flex;
     font-size: 15px;
@@ -138,15 +142,13 @@
 
   .page-header .main-menu__item {
     margin-right: 34px;
+
     &:last-child {
       margin-right: 0;
     }
   }
+
   .page-header .main-menu__list a {
     @include font-parametrs(20px, $white, 500, 30px);
   }
 }
-
-
-
-

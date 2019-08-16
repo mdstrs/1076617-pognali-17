@@ -1,5 +1,6 @@
 .page-title {
   padding-top: 17px;
+
   @include font-parametrs(36px, $white, 700, 40px);
   width: 240px;
   text-align: center;
@@ -10,6 +11,7 @@
 @media (min-width: $tablet-width) {
   .page-title {
     width: 396px;
+
     @include font-parametrs(60px, $white, 700, 70px);
     margin: 0 auto;
     margin-bottom: 84px;

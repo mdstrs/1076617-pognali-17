@@ -1,9 +1,7 @@
 @import "normalize";
-
 @import "global/fonts.scss";
 @import "global/mixins.scss";
 @import "global/vars.scss";
-
 @import "blocks/page-header.scss";
 @import "blocks/main-menu.scss";
 @import "blocks/button.scss";
@@ -23,15 +21,13 @@
 @import "blocks/map.scss";
 @import "blocks/main-footer.scss";
 
-
 body {
   background-color: $navy-blue;
-  background-image: url(../img/globe-back-desktop@1x.jpg);
+  background-image: url("../img/globe-back-desktop@1x.jpg");
   background-repeat: no-repeat;
   min-width: 320px;
   margin: 0;
   padding: 0;
-
 }
 
 img {

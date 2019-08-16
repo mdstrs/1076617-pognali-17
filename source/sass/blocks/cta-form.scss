@@ -7,11 +7,11 @@
   width: 270px;
   margin: 0 auto;
   padding-bottom: 1px;
-
 }
 
 .cta__title {
   padding-top: 53px;
+
   @include font-parametrs(24px, $orange-title, 700, 24px);
   margin-bottom: 20px;
   text-align: center;
@@ -22,6 +22,7 @@
   margin: 0 auto;
   vertical-align: middle;
   text-align: center;
+
   @include font-parametrs(16px, $white, 300, 22px);
   margin-bottom: 28px;
 }
@@ -51,6 +52,7 @@
   border-radius: 10px;
   margin-left: -10px;
   position: relative;
+
   &::before {
     position: absolute;
     top: 24px;
@@ -75,6 +77,7 @@
 
 .cta__contacts-list {
   margin-left: 61px;
+
   a {
     color: #ffd74b;
   }
@@ -114,6 +117,7 @@
     padding-left: 34px;
     padding-bottom: 31px;
     border-radius: 20px 0 0 20px;
+
     &::placeholder {
       font-size: 24px;
     }
@@ -124,11 +128,13 @@
     border-radius: 0 20px 20px 0;
     margin-right: 35px;
     margin-left: -15px;
+
     &::before {
       top: 34px;
       left: 36px;
     }
   }
+
   .cta__contacts-list {
     margin-left: 126px;
   }
@@ -167,6 +173,7 @@
     text-align: left;
     font-size: 24px;
     text-transform: capitalize;
+
     &::before {
       top: 33px;
       left: 279px;

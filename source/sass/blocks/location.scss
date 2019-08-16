@@ -30,6 +30,7 @@
   padding-left: 20px;
   font-size: 18px;
   position: relative;
+
   &::after {
     position: absolute;
     content: "";
@@ -59,5 +60,4 @@
     border-radius: 20px;
     font-size: 24px;
   }
-
 }

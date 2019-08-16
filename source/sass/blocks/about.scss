@@ -17,12 +17,14 @@
   padding-top: 33px;
   padding-left: 24px;
   margin-bottom: 18px;
+
   @include font-parametrs(24px, $orange-title, 700, 24px);
 }
 
 .about__text {
   padding: 0;
   margin: 0;
+
   @include font-parametrs(16px, $white, 300, 22px);
   padding-left: 24px;
   padding-right: 35px;
@@ -57,10 +59,11 @@
     margin-bottom: 38px;
     line-height: 45px;
     position: relative;
+
     &::after {
       position: absolute;
       content: "";
-      background-image: url(../img/about-tablet@1x.png);
+      background-image: url("../img/about-tablet@1x.png");
       width: 376px;
       height: 548px;
       left: 344px;
@@ -104,12 +107,11 @@
     padding-top: 132px;
     padding-left: 70px;
     margin-bottom: 57px;
+
     &::after {
       position: absolute;
       content: "";
-      background-image: url(../img/about-desktop@1x.png);
-      top: 0;
-      left: 0;
+      background-image: url("../img/about-desktop@1x.png");
       width: 630px;
       height: 665px;
       left: 690px;
