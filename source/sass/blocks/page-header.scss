@@ -43,10 +43,10 @@
 }
 
 .page-header--active .page-header__logo--blue {
-  background-image: url("/img/logo-mobile-blue@1x.png");
+  background-image: url("../img/logo-mobile-blue@1x.png");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("/img/logo-mobile-blue@2x.png");
+    background-image: url("../img/logo-mobile-blue@2x.png");
     background-size: 100px, 19px;
   }
   background-repeat: no-repeat;
@@ -98,10 +98,10 @@
   }
 
   .page-header--active .page-header__logo--blue {
-    background-image: url("/img/logo-tablet-blue@1x.png");
+    background-image: url("../img/logo-tablet-blue@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("/img/logo-tablet-blue@2x.png");
+      background-image: url("../img/logo-tablet-blue@2x.png");
       background-size: 164px 42px;
     }
     background-repeat: no-repeat;

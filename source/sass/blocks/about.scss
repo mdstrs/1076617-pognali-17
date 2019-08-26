@@ -1,14 +1,14 @@
 .about {
   padding-bottom: 40px;
   background-color: #192144;
-  background-image: url("/img/about-mobile@1x.png");
+  background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50%;
   border-radius: 0 0 30px 30px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("/img/about-mobile@2x.png");
+    background-image: url("../img/about-mobile@2x.png");
   }
 }
 
