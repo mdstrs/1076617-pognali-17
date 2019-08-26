@@ -1,29 +1,30 @@
-.page-title {
-  padding-top: 17px;
+.page-title__text {
+  padding-top: 47px;
 
   @include font-parametrs(36px, $white, 700, 40px);
   width: 240px;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 244px;
+  padding-bottom: 244px;
 }
 
 @media (min-width: $tablet-width) {
-  .page-title {
-    width: 396px;
-
+  .page-title__text {
     @include font-parametrs(60px, $white, 700, 70px);
+    padding-bottom: 0;
+    width: 395px;
+    padding-top: 77px;
+    text-align: center;
     margin: 0 auto;
-    margin-bottom: 84px;
+    margin-bottom: 85px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-title {
+  .page-title__text {
     margin: 0;
     padding-top: 70px;
     text-align: left;
     padding-left: 67px;
-    margin-right: auto;
   }
 }

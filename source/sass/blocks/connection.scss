@@ -1,14 +1,12 @@
-.connection__wrapper {
-  width: 270px;
-  margin: 0 auto;
-}
-
 .connection__list {
   @include list-reset;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin-bottom: 28px;
+  width: 270px;
+  margin: 0 auto;
+  margin-top: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .connection__item--call {
@@ -53,6 +51,7 @@
 @media (min-width: $tablet-width) {
   .connection__wrapper {
     width: 688px;
+    margin: 0 auto;
   }
 
   .connection__list {
@@ -62,6 +61,7 @@
 
 @media (min-width: $desktop-width) {
   .connection__wrapper {
+    padding-top: 60px;
     width: 1320px;
     display: flex;
   }

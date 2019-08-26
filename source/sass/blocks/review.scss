@@ -1,10 +1,19 @@
 .review {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -36px;
+  position: relative;
+  background-color: #161c35;
+}
+
+.review__wrapper {
   width: 270px;
   margin: 0 auto;
-  margin-bottom: 31px;
 }
 
 .review__text {
+  padding-top: 48px;
+
   @include font-parametrs(16px, $white, 300, 22px);
   width: 56%;
   padding-left: 24px;
@@ -21,12 +30,23 @@
 
 @media (min-width: 768px) {
   .review {
-    width: 688px;
-    padding-left: 10px;
-    margin-bottom: 211px;
+    padding-top: 0;
+    background: none;
+    margin: 0;
+    padding-bottom: 179px;
+  }
+
+  .review__wrapper {
+    padding-top: 0;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 11px;
+    margin-bottom: 174px;
   }
 
   .review__text {
+    padding-top: 0;
+
     @include font-parametrs(28px, $white, 300, 33px);
     width: 267px;
     margin-bottom: 45px;
@@ -42,9 +62,10 @@
   .review {
     margin: 0;
     padding: 0;
-    width: 285px;
+    width: 300px;
     padding-top: 53px;
-    padding-right: 25px;
-    margin-bottom: 114px;
+    margin-left: auto;
+    padding-right: 20px;
+    margin-bottom: 83px;
   }
 }

@@ -1,7 +1,20 @@
 .country {
   background-color: #edeff6;
-  padding-bottom: 50px;
-  border-radius: 0 0 30px 30px;
+  position: relative;
+  padding-bottom: 19px;
+  margin-top: -20px;
+  z-index: -1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -150px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #192144;
+    border-radius: 0 0 30px 30px;
+  }
 }
 
 .country__wrapper {
@@ -12,15 +25,15 @@
 }
 
 .country__title {
-  padding-top: 72px;
-  padding-left: 24px;
+  padding-top: 71px;
+  padding-left: 25px;
 
   @include font-parametrs(24px, $orange-title, 700, 24px);
   margin-bottom: 20px;
 }
 
 .country__title-description {
-  @include font-parametrs(16px, #444444, 300, 22px);
+  @include font-parametrs(16px, $gray, 300, 22px);
   width: 195px;
   padding-left: 24px;
   margin-bottom: 59px;
@@ -28,7 +41,7 @@
 
 .country__list {
   @include list-reset;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .country__item {
@@ -44,15 +57,65 @@
   &:nth-child(3) .country__title--review {
     margin-right: 133px;
   }
+
+  &:first-child .counrty__review {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("/img/flag-thailand.svg");
+      background-repeat: no-repeat;
+      background-size: 35px, 24px;
+      width: 35px;
+      height: 24px;
+      top: -12px;
+      left: 25px;
+    }
+  }
+
+  &:nth-child(2) .counrty__review {
+    margin-top: -15px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("/img/flag-france.svg");
+      background-repeat: no-repeat;
+      background-size: 35px, 24px;
+      width: 35px;
+      height: 24px;
+      top: -12px;
+      left: 25px;
+    }
+  }
+
+  &:nth-child(3) .counrty__review {
+    margin-top: -15px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("/img/flag-czech.svg");
+      background-repeat: no-repeat;
+      background-size: 35px, 24px;
+      width: 35px;
+      height: 24px;
+      top: -11px;
+      left: 25px;
+    }
+  }
 }
 
-.country__image img {
+.country__image {
   border-radius: 10px 10px 0 0;
 }
 
 .counrty__review {
   background-color: $white;
-  margin-top: -11px;
+  margin-top: -14px;
   border-radius: 10px;
   display: flex;
 }
@@ -71,12 +134,12 @@
   padding-left: 24px;
   padding-bottom: 23px;
 
-  @include font-parametrs(16px, #444444, 500, 18px);
+  @include font-parametrs(16px, $gray, 500, 18px);
   opacity: 0.3;
 }
 
 .country__counter {
-  @include font-parametrs(16px, #444444, 500, 30px);
+  @include font-parametrs(16px, $gray, 500, 30px);
   text-transform: uppercase;
   padding-top: 24px;
   opacity: 0.3;
@@ -98,6 +161,8 @@
   border-radius: 10px;
   width: 270px;
   text-transform: none;
+  position: relative;
+  z-index: 999;
 
   span {
     padding-top: 13px;
@@ -112,17 +177,36 @@
 }
 
 @media (min-width: $tablet-width) {
+  .country {
+    background-color: #edeff6;
+    position: relative;
+    padding-bottom: 19px;
+    margin-top: -32px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #192144;
+      border-radius: 0 0 60px 60px;
+    }
+  }
+
   .country__wrapper {
     width: 688px;
     margin: 0 auto;
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;
+    padding-top: 0;
   }
 
   .country__title {
     padding-left: 33px;
-    padding-top: 84px;
+    padding-top: 96px;
     font-size: 45px;
     line-height: 45px;
     margin-bottom: 55px;
@@ -150,11 +234,93 @@
   .country__list {
     padding: 0;
     margin: 0;
-    margin-bottom: 48px;
+    margin-bottom: 41px;
   }
 
   .country__item {
     flex-direction: row-reverse;
+    margin-bottom: 9px;
+    height: 140px;
+    position: relative;
+    z-index: 1;
+
+    &:nth-child(1) {
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url("/img/flag-thailand.svg");
+        background-size: 70px, 47px;
+        width: 70px;
+        height: 47px;
+        top: 15px;
+        left: 433px;
+        z-index: 1;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+
+        @include wh(141px, 141px);
+        background-color: #e2e5f2;
+        top: -70px;
+        left: -35px;
+        border-radius: 20px;
+        z-index: -1;
+      }
+    }
+
+    &:nth-child(2) {
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url("/img/flag-france.svg");
+        background-size: 70px, 47px;
+        width: 70px;
+        height: 47px;
+        top: 16px;
+        left: 433px;
+        z-index: 1;
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url("/img/flag-czech.svg");
+        background-size: 70px, 47px;
+        width: 70px;
+        height: 47px;
+        top: 17px;
+        left: 433px;
+        z-index: 1;
+      }
+    }
+
+    &:nth-child(1) .counrty__review {
+      margin-top: 0;
+
+      &::after {
+        background: none;
+      }
+    }
+
+    &:nth-child(2) .counrty__review {
+      margin-top: 0;
+
+      &::after {
+        background: none;
+      }
+    }
+
+    &:nth-child(3) .counrty__review {
+      margin-top: 0;
+
+      &::after {
+        background: none;
+      }
+    }
   }
 
   .country__image {
@@ -163,6 +329,7 @@
     height: 140px;
     width: 186px;
     z-index: 1;
+    position: relative;
     border-radius: 0 20px 20px 0;
     margin-left: -35px;
     margin-right: 35px;
@@ -171,8 +338,9 @@
   .counrty__review {
     padding: 0;
     margin: 0;
-    z-index: 0;
-    width: 500px;
+    position: relative;
+    z-index: -1;
+    width: 467px;
     border-radius: 20px;
     margin-left: 35px;
     flex-direction: column;
@@ -233,13 +401,27 @@
 }
 
 @media (min-width: $desktop-width) {
+  .country {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #192144;
+      border-radius: 0 0 60px 60px;
+    }
+  }
+
   .country__wrapper {
     width: 1360px;
     margin: 0 auto;
     flex-direction: row;
     align-content: flex-end;
     flex-wrap: wrap;
-    padding-bottom: 89px;
+    padding-bottom: 93px;
+    padding-top: 58px;
   }
 
   .flex {
@@ -258,6 +440,41 @@
 
   .country__title--review {
     padding-top: 25px;
+  }
+
+  .country__item:nth-child(2),
+  .country__item:nth-child(3) {
+    &::after {
+      top: 24px;
+      left: 373px;
+    }
+  }
+
+  .country__item {
+    &:nth-child(1) {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+
+        @include wh(141px, 141px);
+        background-color: #e2e5f2;
+        top: -70px;
+        left: -35px;
+        border-radius: 20px;
+        z-index: -1;
+      }
+
+      &::after {
+        top: 24px;
+        left: 373px;
+      }
+    }
+  }
+
+  .country__image {
+    width: 213px;
   }
 
   .country__title {
