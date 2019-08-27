@@ -69,6 +69,17 @@
   margin-bottom: 67px;
 }
 
+//Каталог
+
+.page-header--catalog {
+  padding-bottom: 37px;
+  margin-bottom: 0;
+}
+
+.page-header--catalog .page-header__logo {
+  padding-top: 19px;
+}
+
 @media (min-width: $tablet-width) {
   .container {
     background-color: #182044;

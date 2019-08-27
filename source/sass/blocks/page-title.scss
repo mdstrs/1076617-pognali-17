@@ -8,6 +8,35 @@
   padding-bottom: 244px;
 }
 
+.page-title--catalog {
+  background-color: #161c35;
+  padding-bottom: 10px;
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  z-index: 99;
+}
+
+.page-title--catalog .page-title__text {
+  padding: 0;
+  margin: 0 auto;
+  padding-top: 14px;
+  width: 270px;
+  text-align: left;
+  display: block;
+  @include font-parametrs(36px, $white, 700, 40px);
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 173px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: #ff8d30;
+    bottom: -12px;
+    left: 0;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .page-title__text {
     @include font-parametrs(60px, $white, 700, 70px);

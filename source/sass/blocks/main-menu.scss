@@ -80,6 +80,12 @@
   }
 }
 
+//Каталог
+
+.page-header--catalog .main-menu__button {
+  top: 23px;
+}
+
 @media (min-width: 768px) {
   //Общие стили main-menu (планештная версия)
   .main-menu {

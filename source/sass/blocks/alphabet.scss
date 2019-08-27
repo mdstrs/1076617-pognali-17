@@ -1,0 +1,54 @@
+.alphabet {
+  width: 225px;
+  margin: 0 auto;
+  order: 4;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+
+}
+
+
+.alphabet__letter {
+  width: 43px;
+  height: 40px;
+  background-color: $white;
+  margin: 0;
+  border: 1px solid #cbced9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 4;
+
+  a {
+    @include font-parametrs(14px, #1d2e5b, 500, 18px);
+    letter-spacing: 1.4px;
+    text-decoration: none;
+  }
+
+  &--current {
+    background-color: #1d2e5b;
+    a {
+      color: $white;
+    }
+  }
+}
+
+.alphabet__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.alphabet__list {
+  order: 5;
+  @include list-reset;
+  margin-left: 26px;
+  align-items: flex-start;
+}
+
+.alphabet__item a {
+  @include font-parametrs(16px, #444444, 400, 22px);
+  text-decoration: none;
+}
+

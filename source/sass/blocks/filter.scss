@@ -1,0 +1,99 @@
+.filter {
+  background-color: #e2e5f2;
+  position: relative;
+  z-index: 98;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+}
+
+.filter__wrapper {
+  padding-top: 17px;
+  width: 270px;
+  margin: 0 auto;
+  // display: none;
+}
+
+.filter__title {
+  @include font-parametrs(16px, #192144, 700, 22px);
+  padding-left: 52px;
+  padding-top: 34px;
+  text-transform: uppercase;
+  margin-right: auto;
+}
+
+.filter__button {
+  margin-right: 30px;
+  margin-top: 30px;
+  position: relative;
+  background: transparent;
+  border: none;
+  @include wh(12px, 12px);
+  span {
+    font-size: 0;
+  }
+
+  &::before {
+    top: 12px;
+    left: 0;
+    width: 17px;
+    height: 3px;
+    position: absolute;
+    content: "...";
+    @include font-parametrs(16px, #192144, 700, 22px);
+    transition: 0.5s;
+  }
+}
+
+.filter__list {
+  order: 3;
+  @include list-reset;
+  margin-top: 0px;
+  margin-left: 25px;
+  margin-bottom: 17px;
+}
+
+.filter__item {
+  margin-bottom: 5px;
+}
+
+.filter__item a {
+  @include font-parametrs(16px, #192144, 700, 22px);
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.filter__item--current a {
+  opacity: 1;
+}
+
+.filter__country-list {
+  order: 5;
+  @include list-reset;
+  margin-left: 26px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.filter__country-item a {
+  @include font-parametrs(16px, #444444, 400, 22px);
+  text-decoration: none;
+}
+
+.filter__country-button {
+  order: 6;
+  width: 100%;
+  background-color: #d6daed;
+  border: none;
+  margin-bottom: 27px;
+  border-radius: 20px;
+  span {
+    text-transform: uppercase;
+    @include font-parametrs(17px, #161c35, 700, 29px);
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
