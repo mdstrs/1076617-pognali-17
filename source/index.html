@@ -13,12 +13,23 @@
   <div class="container">
     <header class="page-header page-header--closed page-header--nojs">
       <div class="page-header__inner">
-        <div class="page-header__logo--blue"></div>
+          <a class="page-header__logo--inner" href="#">
+              <picture class="page-header__logo-image">
+                <source media="(min-width: 768px)"
+                  srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+                <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-blue-white@2x.png 2x" class="header__logo-image"
+                  alt="Погнали?" />
+              </picture>
+            </a>
+
         <a class="page-header__logo" href="#">
           <picture class="page-header__logo-image">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-            <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" class="header__logo-image" alt="Погнали?"/>
+            <source media="(min-width: 1440px)"
+              srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+            <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" class="header__logo-image"
+              alt="Погнали?" />
           </picture>
         </a>
 
@@ -107,7 +118,7 @@
         <h2 class="about__title">О сервисе</h2>
         <p class="about__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь
           своими
-          идеями путешествий и черпайте вдохновение в чужих.</p>
+          идеями путешествий&nbsp;и черпайте вдохновение в чужих.</p>
         <p class="about__text about__text--call">А если найдете кого-то близкого по духу — скорее зовите его в
           совместный
           трип!
@@ -196,18 +207,20 @@
         </div>
         <ul class="travelmates__list">
           <li class="travelmates__item">
-            <img class="travelmates__image" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-destop@2x.jpg 2x" alt="фото пользователя" width="270"
-              height="270">
-              <svg class="travelmates-card__level" viewBox="0 0 120 120" width="60" height="60">
-                  <circle r="57" cx="60" cy="60" fill-opacity="0.6" fill="#081218"></circle>
-                  <text x="33" y="63" style="font-size: 46px; font-weight: 600; font-height: 50px; fill:#ffffff;">99</text>
-                  <text x="33" y="99" style="font-size: 30px; font-weight: 400; font-height: 22px; fill:#7a8083;">level</text>
-                  <line x1="27" y1="71" x2="85" y2="71" stroke="#7e7f82" stroke-width="2"></line>
-                  <circle r="57" cx="60" cy="60" stroke-width="6" stroke="#ff8d30" fill="none"></circle>
-                  <g transform="rotate(-100 60 60)">
-                    <circle r="57" cx="60" cy="60" stroke-width="5" stroke="#515254" fill="none" stroke-dasharray="10 350"></circle>
-                  </g>
-                </svg>
+            <img class="travelmates__image" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-destop@2x.jpg 2x"
+              alt="фото пользователя" width="270" height="270">
+            <svg class="travelmates-card__level" viewBox="0 0 120 120" width="60" height="60">
+              <circle r="57" cx="60" cy="60" fill-opacity="0.6" fill="#081218"></circle>
+              <text x="33" y="63" style="font-size: 46px; font-weight: 600; font-height: 50px; fill:#ffffff;">99</text>
+              <text x="33" y="99"
+                style="font-size: 30px; font-weight: 400; font-height: 22px; fill:#7a8083;">level</text>
+              <line x1="27" y1="71" x2="85" y2="71" stroke="#7e7f82" stroke-width="2"></line>
+              <circle r="57" cx="60" cy="60" stroke-width="6" stroke="#ff8d30" fill="none"></circle>
+              <g transform="rotate(-100 60 60)">
+                <circle r="57" cx="60" cy="60" stroke-width="5" stroke="#515254" fill="none" stroke-dasharray="10 350">
+                </circle>
+              </g>
+            </svg>
             <section class="travelmates__description">
               <h3 class="travelmates__title visually-hidden">Хочет посетить:</h3>
               <ul class="visit-country visit-country">
@@ -271,9 +284,8 @@
                 <li class="ways-to-travel__tooltip ways-to-travel__tooltip--bike" data-tooltip="Велосипед">
                   <a href="#" class="ways-to-travel__item ways-to-travel__item--bike">
                     <span class="visually-hidden">Велосипед</span>
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 21"
-                      style="enable-background:new 0 0 24 21;" xml:space="preserve">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" viewBox="0 0 24 21" style="enable-background:new 0 0 24 21;" xml:space="preserve">
                       <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
                     S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
                     l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5
@@ -305,18 +317,20 @@
           </li>
 
           <li class="travelmates__item">
-            <img class="travelmates__image" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" alt="фото пользователя" width="270"
-              height="270">
-              <svg class="travelmates-card__level" viewBox="0 0 120 120" width="60" height="60">
-                  <circle r="57" cx="59" cy="60" fill-opacity="0.7" fill="#060e11"></circle>
-                  <text x="33" y="63" style="font-size: 46px; font-weight: 600; font-height: 50px; fill:#ffffff;">80</text>
-                  <text x="33" y="99" style="font-size: 30px; font-weight: 400; font-height: 22px; fill:#7a8083;">level</text>
-                  <line x1="27" y1="71" x2="85" y2="71" stroke="#7e7f82" stroke-width="2"></line>
-                  <circle r="57" cx="59" cy="60" stroke-width="6" stroke="#ff8d30" fill="none"></circle>
-                  <g transform="rotate(-150 59 60)">
-                    <circle r="57" cx="59" cy="60" stroke-width="6" stroke="#060e11" fill="none" stroke-dasharray="55 300"></circle>
-                  </g>
-                </svg>
+            <img class="travelmates__image" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x"
+              alt="фото пользователя" width="270" height="270">
+            <svg class="travelmates-card__level" viewBox="0 0 120 120" width="60" height="60">
+              <circle r="57" cx="59" cy="60" fill-opacity="0.7" fill="#060e11"></circle>
+              <text x="33" y="63" style="font-size: 46px; font-weight: 600; font-height: 50px; fill:#ffffff;">80</text>
+              <text x="33" y="99"
+                style="font-size: 30px; font-weight: 400; font-height: 22px; fill:#7a8083;">level</text>
+              <line x1="27" y1="71" x2="85" y2="71" stroke="#7e7f82" stroke-width="2"></line>
+              <circle r="57" cx="59" cy="60" stroke-width="6" stroke="#ff8d30" fill="none"></circle>
+              <g transform="rotate(-150 59 60)">
+                <circle r="57" cx="59" cy="60" stroke-width="6" stroke="#060e11" fill="none" stroke-dasharray="55 300">
+                </circle>
+              </g>
+            </svg>
             <section class="travelmates__description">
               <h3 class="travelmates__title visually-hidden">Хочет посетить:</h3>
               <ul class="visit-country visit-country--two">
@@ -341,9 +355,8 @@
                   <a class="ways-to-travel__item ways-to-travel__item--current ways-to-travel__item--plane" href="#">
                     <span class="visually-hidden">Самолет</span>
 
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 21"
-                      style="enable-background:new 0 0 19 21;" xml:space="preserve">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" viewBox="0 0 19 21" style="enable-background:new 0 0 19 21;" xml:space="preserve">
                       <path
                         d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
                     c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
@@ -359,9 +372,8 @@
                   <a class="ways-to-travel__item ways-to-travel__item--bus" href="#">
                     <span class="visually-hidden">Автобус</span>
 
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 21"
-                      style="enable-background:new 0 0 17 21;" xml:space="preserve">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
                       <path
                         d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4
                     c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5
@@ -375,9 +387,8 @@
                   <a href="#" class="ways-to-travel__item ways-to-travel__item--bike">
                     <span class="visually-hidden">Велосипед</span>
 
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 21"
-                      style="enable-background:new 0 0 24 21;" xml:space="preserve">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" viewBox="0 0 24 21" style="enable-background:new 0 0 24 21;" xml:space="preserve">
                       <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
                     S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
                     l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5
@@ -390,9 +401,8 @@
                   <a class="ways-to-travel__item ways-to-travel__item--run" href="#">
                     <span class="visually-hidden">Пешком</span>
 
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 21"
-                      style="enable-background:new 0 0 20 21;" xml:space="preserve">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" viewBox="0 0 20 21" style="enable-background:new 0 0 20 21;" xml:space="preserve">
                       <g>
                         <ellipse cx="14.3" cy="2" rx="2.1" ry="2" />
                         <path d="M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6
@@ -415,7 +425,8 @@
     <section class="rates">
       <div class="rates__wrapper">
         <h2 class="rates__title">Добавьте свой профиль!</h2>
-        <img class="rates__image" src="img/rates@1x.png" srcset="img/rates@2x.png 2x" alt="Добавьте свое профиль" width="99" height="99">
+        <img class="rates__image" src="img/rates@1x.png" srcset="img/rates@2x.png 2x" alt="Добавьте свое профиль"
+          width="99" height="99">
         <table class="rates__table">
           <tr>
             <td>Базовое размещение</td>
@@ -462,13 +473,16 @@
     <section class="location">
       <div class="location__wrapper">
         <span class="location__adress">ул. Большая Конюшенная, 19/8</span>
-        <a href="https://yandex.ru/maps/-/CGCDaIzI" target="_blank" class="button location__button"><span>Проложить маршрут</span></a>
+        <a href="https://yandex.ru/maps/-/CGCDaIzI" target="_blank" class="button location__button"><span>Проложить
+            маршрут</span></a>
       </div>
     </section>
 
     <section class="map">
       <h2 class="visually-hidden">Месторасположение на карте</h2>
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6c8503e4400143d0ac084d71f934a7537ead1b2079f348fc967e45d386f40be&amp;source=constructor" style="width: 100%" height="400"></iframe>
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6c8503e4400143d0ac084d71f934a7537ead1b2079f348fc967e45d386f40be&amp;source=constructor"
+        style="width: 100%" height="400"></iframe>
     </section>
 
   </main>
@@ -526,11 +540,15 @@
 
         <li class="social-item">
           <a class="social-link social-link--inst">
-              <svg class="social-image social-image--inst" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23"><path class="st0" d="M17 1.5c2.5 0 4.5 2 4.5 4.5v11c0 2.5-2 4.5-4.5 4.5H6c-2.5 0-4.5-2-4.5-4.5V6c0-2.5 2-4.5 4.5-4.5h11M17 0H6C2.7 0 0 2.7 0 6v11c0 3.3 2.7 6 6 6h11c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6z"/><path class="st0" d="M11.5 7.1c2.4 0 4.4 2 4.4 4.4 0 2.4-2 4.4-4.4 4.4-2.4 0-4.4-2-4.4-4.4 0-2.4 2-4.4 4.4-4.4m0-1.5c-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9-2.6-5.9-5.9-5.9z"/>
-                <circle class="st0" cx="17.6" cy="5.4" r="1.3"/></svg>
-            </a>
-          </li>
-        </ul>
+            <svg class="social-image social-image--inst" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23">
+              <path class="st0"
+                d="M17 1.5c2.5 0 4.5 2 4.5 4.5v11c0 2.5-2 4.5-4.5 4.5H6c-2.5 0-4.5-2-4.5-4.5V6c0-2.5 2-4.5 4.5-4.5h11M17 0H6C2.7 0 0 2.7 0 6v11c0 3.3 2.7 6 6 6h11c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6z" />
+              <path class="st0"
+                d="M11.5 7.1c2.4 0 4.4 2 4.4 4.4 0 2.4-2 4.4-4.4 4.4-2.4 0-4.4-2-4.4-4.4 0-2.4 2-4.4 4.4-4.4m0-1.5c-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9-2.6-5.9-5.9-5.9z" />
+              <circle class="st0" cx="17.6" cy="5.4" r="1.3" /></svg>
+          </a>
+        </li>
+      </ul>
 
 
 
@@ -573,7 +591,8 @@
         <td>Индивидуально</td>
       </tr>
     </table>
-    <button class="business-rates__button rates__button business-rates__button--closed" type="button"><span>Закрыть окно</span></button>
+    <button class="business-rates__button rates__button business-rates__button--closed" type="button"><span>Закрыть
+        окно</span></button>
   </section>
 
 
@@ -614,10 +633,8 @@
         }
       }
     });
-
   </script>
-<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6Uxe9vNJvbaxBAvGCn7KS5AmlnYR1RyU&callback=initMap">
-</script>
+
 </body>
 
 </html>

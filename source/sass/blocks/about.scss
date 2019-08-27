@@ -49,11 +49,15 @@
 @media (min-width: $tablet-width) {
   .about {
     background-image: none;
+    position: relative;
+    z-index: 8;
   }
 
   .about__wrapper {
     width: 688px;
     margin: 0 auto;
+    margin-top: -20px;
+    padding-top: 20px;
   }
 
   .about .button {
@@ -121,6 +125,7 @@
   .about {
     background-color: #192144;
     margin-top: -105px;
+    z-index: 0;
   }
 
   .about__wrapper {

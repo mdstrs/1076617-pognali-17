@@ -52,3 +52,10 @@
   text-decoration: none;
 }
 
+@media (min-width: $tablet-width) {
+  .alphabet {
+    width: 400px;
+    align-content: flex-start;
+    order: 3;
+  }
+}

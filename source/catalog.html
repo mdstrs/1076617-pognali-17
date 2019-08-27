@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="catalog__container">
     <header class="page-header--catalog page-header page-header--closed page-header--nojs">
       <div class="page-header__inner">
         <div class="page-header__logo--blue"></div>
@@ -71,12 +71,13 @@
   <main>
     <section class="page-title--catalog">
       <h1 class="page-title__text">Попутчики</h1>
+      <a class="page-title__link" href="/index.html">На главную</a>
     </section>
 
     <section class="filter">
       <h2 class="filter__title">Фильтрация по странам</h2>
-      <button type="button" class="filter__button filter__button--closed"><span>Свернуть</span></button>
-        <div class="filter__wrapper">
+      <div class="filter__wrapper filter__wrapper--active">
+          <button type="button" class="filter__button filter__button--closed"><span>Свернуть</span></button>
           <ul class="filter__list">
             <li class="filter__item filter__item--current"><a href="#">Европа</a></li>
             <li class="filter__item"><a href="#">Азия</a></li>

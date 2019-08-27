@@ -1,5 +1,6 @@
 .intro {
   width: 100%;
+  box-sizing: border-box;
   background-color: #161c35;
   padding-bottom: 50px;
 }
@@ -39,7 +40,7 @@
     padding-bottom: 20px;
 
     & span {
-      padding-top: 22px;
+      padding-top: 32px;
     }
   }
 
