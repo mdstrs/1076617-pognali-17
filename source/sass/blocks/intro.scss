@@ -1,12 +1,15 @@
 .intro {
-  width: 320px;
-  margin: 0 auto;
-  margin-bottom: 39px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #161c35;
+  padding-bottom: 50px;
+  position: relative;
 }
 
 .intro__list {
   @include list-reset;
   counter-reset: olnumber;
+  padding-top: 31px;
   width: 270px;
   margin: 0 auto;
 }
@@ -36,10 +39,6 @@
   &:nth-child(1) {
     background-color: #ff8d30;
     padding-bottom: 20px;
-
-    & span {
-      padding-top: 22px;
-    }
   }
 
   &:nth-child(2) {
@@ -63,9 +62,13 @@
 
 @media (min-width: $tablet-width) {
   .intro {
+    position: relative;
+    z-index: 3;
     width: $tablet-width;
     margin: 0 auto;
-    margin-bottom: 96px;
+    background: none;
+    margin-top: -174px;
+    padding-bottom: 58px;
   }
 
   .intro__list {
@@ -131,12 +134,12 @@
 @media (min-width: $desktop-width) {
   .intro {
     width: $desktop-width;
-    margin-bottom: 123px;
   }
 
   .intro__list {
     width: 1320px;
     margin: 0 auto;
+    padding-bottom: 65px;
   }
 
   .intro__item {

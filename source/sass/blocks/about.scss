@@ -1,12 +1,22 @@
 .about {
-  width: 320px;
-  margin: 0 auto;
   padding-bottom: 40px;
+  background-color: #192144;
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  border-radius: 0 0 30px 30px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
 }
 
 .about__wrapper {
+  padding-top: 1px;
   width: 270px;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .about .button {
@@ -14,7 +24,6 @@
 }
 
 .about__title {
-  padding-top: 33px;
   padding-left: 24px;
   margin-bottom: 18px;
 
@@ -24,6 +33,7 @@
 .about__text {
   padding: 0;
   margin: 0;
+  width: 210px;
 
   @include font-parametrs(16px, $white, 300, 22px);
   padding-left: 24px;
@@ -38,13 +48,16 @@
 
 @media (min-width: $tablet-width) {
   .about {
-    width: $tablet-width;
-    margin: 0 auto;
+    background-image: none;
+    position: relative;
+    z-index: 8;
   }
 
   .about__wrapper {
     width: 688px;
     margin: 0 auto;
+    margin-top: -20px;
+    padding-top: 20px;
   }
 
   .about .button {
@@ -59,6 +72,19 @@
     margin-bottom: 38px;
     line-height: 45px;
     position: relative;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 688px;
+      height: 213px;
+      border-radius: 20px;
+      background-color: #141b3b;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
 
     &::after {
       position: absolute;
@@ -69,6 +95,11 @@
       left: 344px;
       top: 48px;
       z-index: -1;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/about-tablet@2x.png");
+        background-size: contain;
+      }
     }
   }
 
@@ -79,6 +110,8 @@
     padding-right: 0;
     width: 300px;
     margin-bottom: 33px;
+    position: relative;
+    z-index: 1;
   }
 
   .about__text--call {
@@ -90,13 +123,17 @@
 
 @media (min-width: $desktop-width) {
   .about {
-    width: 1320px;
-    margin: 0 auto;
-    padding-bottom: 163px;
+    background-color: #192144;
+    margin-top: -108px;
+    position: relative;
+    z-index: 12;
   }
 
   .about__wrapper {
-    width: 100%;
+    padding-top: 70px;
+    width: 1320px;
+    margin: 0 auto;
+    padding-bottom: 95px;
   }
 
   .about .button {
@@ -104,7 +141,7 @@
   }
 
   .about__title {
-    padding-top: 132px;
+    padding-top: 134px;
     padding-left: 70px;
     margin-bottom: 57px;
 
@@ -115,8 +152,18 @@
       width: 630px;
       height: 665px;
       left: 690px;
-      top: 85px;
-      z-index: -1;
+      top: 87px;
+      z-index: 12;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/about-desktop@2x.png");
+        background-size: contain;
+      }
+    }
+
+    &::before {
+      top: 70px;
+      width: 213px;
     }
   }
 

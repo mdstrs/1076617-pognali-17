@@ -1,0 +1,26 @@
+.page-form {
+  position: relative;
+  z-index: 10;
+}
+
+.page-form .main-footer {
+  padding-top: 5px;
+}
+
+.page-form .copyright__item {
+  margin-top: -8px;
+}
+
+.page-form.copyright__image {
+  margin-top: -7px;
+}
+
+.form {
+  background-color: #edeff6;
+}
+
+@media (min-width: $desktop-width) {
+  .page-form .container--catalog {
+    z-index: 1;
+  }
+}

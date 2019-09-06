@@ -11,6 +11,14 @@
   text-align: center;
   border-radius: 25px;
   border: none;
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
 }
 
 .button--more {
@@ -40,6 +48,6 @@
     height: 0;
     border-style: solid;
     border-width: 7px 0 7px 10px;
-    border-color: transparent transparent transparent $navy-blue;
+    border-color: transparent  transparent  transparent $navy-blue;
   }
 }
