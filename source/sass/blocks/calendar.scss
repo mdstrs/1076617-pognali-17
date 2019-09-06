@@ -46,8 +46,7 @@
   box-sizing: border-box;
   padding-top: 0;
 
-  @include fonts(14px,18px,400);
-  font-family: $main-font;
+  @include font-parametrs(14px, #cbced9, 18px, 400);
   width: 31px;
   height: 31px;
   border-right: 1px solid #cbced9;
@@ -86,6 +85,7 @@
 
 .calendar__numbers-item--next {
   background-color: #edeff6;
+  color: #444444;
 }
 
 .calendar__numbers-item--active {
@@ -187,7 +187,7 @@
     width: 140px;
     height: 71px;
 
-    @include fonts(20px,18px,500);
+    @include fonts(20px,18px,400);
     font-family: $main-font;
 
     &:hover {
@@ -230,6 +230,8 @@
   .calendar__numbers-item:nth-of-type(32) {
     position: relative;
     width: 144px;
+    letter-spacing: 1.8px;
+    font-weight: 400;
 
     &::before {
       position: absolute;
@@ -241,6 +243,8 @@
 
   .calendar__numbers-item:nth-of-type(34) {
     position: relative;
+    letter-spacing: 1.8px;
+    font-weight: 400;
 
     &::before {
       position: absolute;

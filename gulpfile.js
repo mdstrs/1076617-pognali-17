@@ -111,8 +111,8 @@ gulp.task("clean", function () {
 gulp.task("build", gulp.series(
   "clean",
   "copy",
-  "webp",
-  "images",
+  // "webp",
+  // "images",
   "html",
   "minify",
   "css",

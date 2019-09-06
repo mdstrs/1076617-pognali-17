@@ -1,5 +1,5 @@
 var form = document.querySelector(".cta__form");
-var input = form.querySelector('.cta-form__input')
+var input = form.querySelector(".cta-form__input")
 var email = form.querySelector("[name=email]");
 var error = form.querySelector("[placeholder=E-mail]");
 

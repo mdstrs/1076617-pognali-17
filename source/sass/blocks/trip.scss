@@ -404,7 +404,7 @@
   width: 230px;
   height: 40px;
 
-  @include font-parametrs(17px, #161c35, 700, 30px);
+  @include font-parametrs(17px, #1d2e5b, 700, 30px);
   background-color: #ffd74b;
   border-radius: 30px;
   text-decoration: none;
@@ -430,7 +430,7 @@
 
   &:active {
     opacity: 0.3;
-    color: $navy-blue;
+    color: #1d2e5b;
   }
 }
 
@@ -505,7 +505,7 @@
   text-transform: uppercase;
   border: 1px solid #b2b2b2;
   border-radius: 3px;
-  letter-spacing: 1px;
+  letter-spacing: 1.4px;
 }
 
 .trip__choose-button {
@@ -604,6 +604,7 @@
   width: 220px;
 
   @include font-parametrs(14px, #1d2e5b, 500, 18px);
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   border: 1px solid #b2b2b2;
   border-radius: 5px;
@@ -707,6 +708,7 @@
   cursor: pointer;
   background-color: transparent;
   border-radius: 5px;
+  font-weight: 500;
 
   &::after,
   &::before {
@@ -1209,10 +1211,10 @@
     margin-top: 15px;
     margin-left: 14px;
 
-    @include font-size(20px, 18px,400);
+    @include font-size(20px, 18px, 500);
     border: none;
     width: 280px;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
   }
 
   .trip__choose-button {
@@ -1285,8 +1287,8 @@
     margin-left: 14px;
     width: 369px;
 
-    @include font-size(20px,18px,400);
-    letter-spacing: 2.5px;
+    @include font-size(20px, 18px, 500);
+    letter-spacing: 2px;
     border: none;
   }
 
