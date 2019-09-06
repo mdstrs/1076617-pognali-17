@@ -1,0 +1,98 @@
+.alphabet {
+  width: 225px;
+  margin: 0 auto;
+  order: 4;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.alphabet__letter {
+  width: 43px;
+  height: 40px;
+  background-color: $white;
+  margin: 0;
+  border: 1px solid #cbced9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 4;
+
+  a {
+    @include font-parametrs(14px, #1d2e5b, 500, 18px);
+    letter-spacing: 1.4px;
+    text-decoration: none;
+  }
+
+  &--current {
+    background-color: #1d2e5b;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+.alphabet__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.alphabet__list {
+  order: 5;
+
+  @include list-reset;
+  margin-left: 26px;
+  align-items: flex-start;
+}
+
+.alphabet__item a {
+  @include font-parametrs(16px, #444444, 400, 22px);
+  text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .alphabet {
+    width: 400px;
+    order: 3;
+    margin: 0;
+    padding-left: 34px;
+    margin-bottom: 50px;
+    margin-right: 19px;
+  }
+
+  .alphabet__wrapper {
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(11),
+    &:nth-child(24),
+    &:nth-child(27) {
+      display: none;
+    }
+  }
+
+  .alphabet__letter {
+    width: 77px;
+    height: 83px;
+    background-color: transparent;
+    border: none;
+    order: 4;
+    justify-content: space-between;
+
+    a {
+      @include font-parametrs(60px, #192144, 700, 24px);
+      text-decoration: none;
+      opacity: 0.3;
+    }
+
+    &--current {
+      background-color: transparent;
+
+      a {
+        color: #192144;
+        opacity: 1;
+      }
+    }
+  }
+}

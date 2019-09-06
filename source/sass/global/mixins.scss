@@ -22,3 +22,20 @@
   width: $width;
   height: $height;
 }
+
+@mixin font-size($size, $height, $weight) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin fonts($size, $height, $weight) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin discard {
+  margin: 0;
+  padding: 0;
+}

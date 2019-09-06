@@ -1,0 +1,1124 @@
+.travelmates-form {
+  width: 270px;
+  background-color: #ffd74b;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+}
+
+.travelmates-form__wrapper {
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 22px;
+}
+
+.travelmates-form__caption {
+  @include font-parametrs(22px, #1d2e5b, 700, 23px);
+  width: 120px;
+  padding-top: 6px;
+}
+
+//Секции (общие стили)
+
+.travelmates-form__title {
+  margin: 0;
+  text-transform: uppercase;
+  width: 220px;
+
+  @include font-parametrs(16px, #1d2e5b, 700, 18px);
+}
+
+.travelmates-form__button {
+  position: relative;
+  border: none;
+  background: transparent;
+  font-size: 0;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 4px;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'%0AviewBox='0 0 10 5' style='enable-background:new 0 0 10 5;' fill='%23192144' xml:space='preserve'%3E%3Cpolygon points='5,5 0,0 10,0 '/%3E%3C/svg%3E%0A");
+    top: -25px;
+    left: 212px;
+    transition: 1s;
+    transform: rotate(360deg);
+  }
+}
+
+.travelmates-form__list {
+  @include list-reset;
+}
+
+.travelmates-form__list--show .travelmates-form__item {
+  display: block;
+}
+
+.travelmates-form__item {
+  padding-left: 25px;
+  display: none;
+  margin-top: -5px;
+  padding-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.travelmates-form__item-label {
+  @include font-parametrs(15px, #444444, 400, 15px);
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    @include wh(18px, 18px);
+    border-radius: 4px;
+    top: -4px;
+    left: -26px;
+    background: $white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    @include wh(18px, 18px);
+    background-color: $white;
+    border-radius: 4px;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'%0AviewBox='0 0 12 12' fill='%23192144' style='enable-background:new 0 0 12 12;' xml:space='preserve'%3E%3Cpolygon points='12,0 3.8,8 0,4.3 0,8.3 3.8,12 12,4 '/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-size: 9px, 9px;
+    background-repeat: no-repeat;
+    top: -4px;
+    left: -26px;
+    display: none;
+  }
+}
+
+.travelmates-form__item-input:checked + .travelmates-form__item-label::before {
+  display: none;
+}
+
+.travelmates-form__item-input:checked + .travelmates-form__item-label::after {
+  display: block;
+}
+
+.travelmates-form__hobby {
+  padding: 0;
+  border-top: 1px solid #f3c72b;
+  padding-top: 14px;
+  width: 220px;
+}
+
+.travelmates-form__music {
+  margin-top: -9px;
+  width: 220px;
+  padding-top: 12px;
+  padding-left: 1px;
+  border-top: 1px solid #f3c72b;
+}
+
+.travelmates-form__eat {
+  margin-top: 3px;
+  width: 220px;
+  padding-left: 1px;
+  padding-top: 12px;
+  border-top: 1px solid #f3c72b;
+}
+
+.travelmates-form__ways-to-travel {
+  border-top: 1px solid #f3c72b;
+  margin-top: -9px;
+  padding-top: 12px;
+  padding-left: 1px;
+}
+
+.travelmates-form__ways-to-travel .travelmates-form__list {
+  margin-left: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.travelmates-form__ways-to-travel .travelmates-form__item {
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.travelmates-form__ways-to-travel .travelmates-form__item-label {
+  padding-right: 7px;
+
+  &::after {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+  }
+
+  &::before {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--plane {
+    &::after {
+
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' viewBox='0 0 19 21' style='enable-background:new 0 0 19 21;' xml:space='preserve'%3E%3Cpath d='M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8%0Ac-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6%0AC-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1%0Ac-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1%0Ac0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9%0Ac0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5%0Ac0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z'/%3E%3C/svg%3E");
+      background-size: 14px, 16px;
+    }
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 19 21' style='enable-background:new 0 0 19 21;' xml:space='preserve'%3E%3Cpath d='M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8%0Ac-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6%0AC-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1%0Ac-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1%0Ac0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9%0Ac0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5%0Ac0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z'/%3E%3C/svg%3E");
+      background-size: 14px, 16px;
+    }
+  }
+
+  &--bus {
+    &::after {
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='svg2103' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b'%0AviewBox='0 0 17 21' style='enable-background:new 0 0 17 21;' xml:space='preserve'%3E%3Cpath d='M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4%0Ac0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5%0AC4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z%0AM8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9%0AH8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z'/%3E%3C/svg%3E");
+      background-size: 13px, 16px;
+      top: -4px;
+      left: -26px;
+    }
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='svg2103' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 17 21' style='enable-background:new 0 0 17 21;' xml:space='preserve'%3E%3Cpath d='M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4%0Ac0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5%0AC4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z%0AM8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9%0AH8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z'/%3E%3C/svg%3E");
+      background-size: 13px, 16px;
+    }
+  }
+
+  &--bike {
+    &::after {
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b'%0AviewBox='0 0 24 21' style='enable-background:new 0 0 24 21;' xml:space='preserve'%3E%3Cpath d='M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5%0AS21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2%0Al-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5%0Al-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5%0As1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z'/%3E%3C/svg%3E");
+      background-size: 19px 17px;
+    }
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 24 21' style='enable-background:new 0 0 24 21;' xml:space='preserve'%3E%3Cpath d='M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5%0AS21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2%0Al-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5%0Al-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5%0As1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z'/%3E%3C/svg%3E");
+      background-size: 19px 17px;
+    }
+  }
+
+  &--run {
+    &::after {
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Icons_Run' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b'%0AviewBox='0 0 20 21' style='enable-background:new 0 0 20 21;' xml:space='preserve'%3E%3Cg%3E%3Cellipse cx='14.3' cy='2' rx='2.1' ry='2'/%3E%3Cpath d='M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6%0AC5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5%0Ac0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4%0Ac0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6%0Az'/%3E%3C/g%3E%3C/svg%3E%0A");
+      background-size: 15px 17px;
+    }
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Icons_Run' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 20 21' style='enable-background:new 0 0 20 21;' xml:space='preserve'%3E%3Cg%3E%3Cellipse cx='14.3' cy='2' rx='2.1' ry='2'/%3E%3Cpath d='M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6%0AC5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5%0Ac0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4%0Ac0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6%0Az'/%3E%3C/g%3E%3C/svg%3E%0A");
+      background-size: 15px 17px;
+    }
+  }
+}
+
+.travelmates-form__range {
+  border-top: 1px solid #f3c72b;
+  margin-top: 17px;
+  width: 220px;
+  padding-top: 12px;
+  padding-left: 1px;
+  margin-bottom: 10px;
+
+  .travelmates-form__title {
+    margin-bottom: -2px;
+  }
+}
+
+.travelmates-form__range-controls {
+  position: relative;
+  border-radius: 5px;
+  width: 190px;
+  margin-left: -27px;
+}
+
+.travelmates-form__range-controls .travelmates-form__scale {
+  width: 216px;
+  height: 2px;
+  background: #1d2e5b;
+}
+
+.travelmates-form__range-controls .travelmates-form__bar {
+  width: 70px;
+  height: 2px;
+  background-color: #cbced9;
+}
+
+.travelmates-form__price-controls {
+  margin-bottom: 24px;
+  display: flex;
+  margin-left: -26px;
+}
+
+.travelmates-form__min-price,
+.travelmates-form__max-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 109px;
+  height: 33px;
+  border: 1px solid #cbced9;
+  background: $white;
+
+  @include font-parametrs (15px, #1d2e5b, 500, 13px);
+  letter-spacing: 2px;
+}
+
+.travelmates-form__min-price {
+  border-radius: 4px 0 0 4px;
+  position: relative;
+  border-right: none;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 11px;
+    background: #cbced9;
+    transform: rotate(90deg);
+    left: 104px;
+    top: 4px;
+    box-shadow: 22px 0 0 0 #cbced9;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 16px;
+    background: #cbced9;
+    left: 101px;
+    top: 16px;
+  }
+}
+
+.travelmates-form__max-price {
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+}
+
+.travelmates-form__range-controls .travelmates-form__toggle-min {
+  position: absolute;
+  top: -4px;
+  left: 68px;
+  width: 10px;
+  height: 10px;
+  background: #1d2e5b;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s;
+
+  &:hover {
+    @include wh(19px, 19px);
+    transition: 0.6s;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px rgba(29, 46, 91, 0.35);
+  }
+}
+
+.travelmates-form__range-controls .travelmates-form__toggle-max {
+  position: absolute;
+  top: -4px;
+  left: 211px;
+  width: 10px;
+  height: 10px;
+  background: #1d2e5b;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s;
+
+  &:hover {
+    @include wh(19px, 19px);
+    transition: 0.6s;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px rgba(29, 46, 91, 0.35);
+  }
+}
+
+.travelmates-form__button-send {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 40px;
+  margin-left: -5px;
+  border: none;
+  background: $white;
+  border-radius: 20px;
+
+  span {
+    @include font-parametrs(17px, #161c35, 700, 30px);
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .travelmates-form {
+    width: 688px;
+    margin-bottom: 39px;
+  }
+
+  .travelmates-form__wrapper {
+    padding-left: 34px;
+    padding-top: 5px;
+    padding-bottom: 39px;
+  }
+
+  .travelmates-form__caption {
+    font-size: 30px;
+    line-height: 30px;
+    width: 500px;
+  }
+
+  .travelmates-form__button {
+    display: none;
+  }
+
+  .travelmates-form__title {
+    font-size: 20px;
+    line-height: 30px;
+    width: 100px;
+    margin-right: 88px;
+  }
+
+  .travelmates-form__music {
+    width: 618px;
+    margin: 0;
+    padding: 0;
+    border-top: none;
+    padding-top: 20px;
+    display: flex;
+
+    .travelmates-form__list {
+      justify-content: flex-start;
+    }
+
+    .travelmates-form__item {
+      margin: 0;
+      padding: 0;
+      padding-top: 6px;
+
+      &:first-child {
+        width: 130px;
+        margin-right: 38px;
+      }
+
+      &:nth-child(2) {
+        width: 130px;
+        margin-right: 43px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .travelmates-form__list {
+    display: flex;
+    width: 618px;
+    align-content: flex-start;
+  }
+
+  .travelmates-form__item {
+    display: flex;
+  }
+
+  .travelmates-form__item-label {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+
+    &::before {
+      @include wh(24px, 24px);
+      top: -4px;
+      left: -36px;
+    }
+
+    &::after {
+      @include wh(24px, 24px);
+      top: -4px;
+      left: -36px;
+      background-size: 12px, 12px;
+    }
+  }
+
+  .travelmates-form__hobby {
+    width: 618px;
+    margin: 0;
+    padding: 0;
+    margin-top: 12px;
+    padding-top: 33px;
+    padding-left: 1px;
+    display: flex;
+
+    .travelmates-form__list {
+      justify-content: flex-start;
+    }
+
+    .travelmates-form__item {
+      margin: 0;
+      padding: 0;
+      padding-top: 6px;
+
+      &:first-child {
+        margin-right: 93px;
+      }
+
+      &:nth-child(2) {
+        margin-right: 115px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .travelmates-form__eat {
+    width: 618px;
+    margin: 0;
+    padding: 0;
+    border-top: none;
+    padding-top: 20px;
+    display: flex;
+
+    .travelmates-form__list {
+      justify-content: flex-start;
+    }
+
+    .travelmates-form__item {
+      margin: 0;
+      padding: 0;
+      padding-top: 6px;
+
+      &:first-child {
+        width: 130px;
+        margin-right: 39px;
+      }
+
+      &:nth-child(2) {
+        width: 130px;
+        margin-right: 43px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .travelmates-form__ways-to-travel {
+    width: 618px;
+    margin: 0;
+    padding: 0;
+    border-top: none;
+    padding-top: 28px;
+    display: flex;
+
+    .travelmates-form__list {
+      justify-content: flex-start;
+      margin-left: -55px;
+      margin-top: 0;
+    }
+  }
+
+  .travelmates-form__ways-to-travel .travelmates-form__item-label {
+    padding-right: 18px;
+
+    &::after {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+    }
+
+    &::before {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--plane {
+      &::after {
+
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' viewBox='0 0 19 21' style='enable-background:new 0 0 19 21;' xml:space='preserve'%3E%3Cpath d='M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8%0Ac-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6%0AC-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1%0Ac-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1%0Ac0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9%0Ac0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5%0Ac0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z'/%3E%3C/svg%3E");
+        background-size: 19px, 21px;
+      }
+
+      &::before {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 19 21' style='enable-background:new 0 0 19 21;' xml:space='preserve'%3E%3Cpath d='M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8%0Ac-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6%0AC-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1%0Ac-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1%0Ac0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9%0Ac0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5%0Ac0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z'/%3E%3C/svg%3E");
+        background-size: 19px, 21px;
+      }
+    }
+
+    &--bus {
+      &::after {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='svg2103' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b'%0AviewBox='0 0 17 21' style='enable-background:new 0 0 17 21;' xml:space='preserve'%3E%3Cpath d='M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4%0Ac0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5%0AC4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z%0AM8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9%0AH8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z'/%3E%3C/svg%3E");
+        background-size: 17px, 21px;
+        top: -4px;
+        left: -36px;
+      }
+
+      &::before {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='svg2103' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 17 21' style='enable-background:new 0 0 17 21;' xml:space='preserve'%3E%3Cpath d='M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4%0Ac0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5%0AC4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z%0AM8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9%0AH8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z'/%3E%3C/svg%3E");
+        background-size: 17px, 21px;
+      }
+    }
+
+    &--bike {
+      &::after {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b'%0AviewBox='0 0 24 21' style='enable-background:new 0 0 24 21;' xml:space='preserve'%3E%3Cpath d='M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5%0AS21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2%0Al-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5%0Al-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5%0As1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z'/%3E%3C/svg%3E");
+        background-size: 24px 21px;
+      }
+
+      &::before {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 24 21' style='enable-background:new 0 0 24 21;' xml:space='preserve'%3E%3Cpath d='M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5%0AS21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2%0Al-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5%0Al-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5%0As1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z'/%3E%3C/svg%3E");
+        background-size: 24px 21px;
+      }
+    }
+
+    &--run {
+      &::after {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Icons_Run' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b'%0AviewBox='0 0 20 21' style='enable-background:new 0 0 20 21;' xml:space='preserve'%3E%3Cg%3E%3Cellipse cx='14.3' cy='2' rx='2.1' ry='2'/%3E%3Cpath d='M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6%0AC5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5%0Ac0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4%0Ac0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6%0Az'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-size: 20px 21px;
+      }
+
+      &::before {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Icons_Run' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 20 21' style='enable-background:new 0 0 20 21;' xml:space='preserve'%3E%3Cg%3E%3Cellipse cx='14.3' cy='2' rx='2.1' ry='2'/%3E%3Cpath d='M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6%0AC5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5%0Ac0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4%0Ac0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6%0Az'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-size: 20px 21px;
+      }
+    }
+  }
+
+  .travelmates-form__range {
+    padding-top: 9px;
+    padding-left: 1px;
+    display: flex;
+    width: 618px;
+    border-top: none;
+    border-bottom: 1px solid #f3c72b;
+    margin-bottom: 31px;
+
+    .travelmates-form__item {
+      display: flex;
+    }
+
+    .travelmates-form__range-controls {
+      order: 1;
+      margin-right: 182px;
+      margin-top: 15px;
+      margin-left: -60px;
+    }
+
+    .travelmates-form__price-controls {
+      order: 2;
+    }
+  }
+
+  .travelmates-form__range-controls .travelmates-form__scale {
+    width: 277px;
+    height: 2px;
+    background: #1d2e5b;
+  }
+
+  .travelmates-form__min-price,
+  .travelmates-form__max-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 73px;
+    height: 46px;
+    border: 1px solid #cbced9;
+    background: $white;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin-top: -5px;
+  }
+
+  .travelmates-form__min-price {
+    border-radius: 4px 0 0 4px;
+    position: relative;
+    border-right: none;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 17px;
+      background: #cbced9;
+      transform: rotate(90deg);
+      left: 63px;
+      top: 7px;
+      box-shadow: 30px 0 0 0 #cbced9;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 22px;
+      background: #cbced9;
+      left: 63px;
+      top: 22px;
+    }
+  }
+
+  .travelmates-form__max-price {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+  }
+
+  .travelmates-form__range-controls .travelmates-form__toggle-min {
+    top: -4px;
+    left: 71px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .travelmates-form__range-controls .travelmates-form__toggle-max {
+    top: -4px;
+    left: 271px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .travelmates-form__button-send {
+    width: 618px;
+    height: 50px;
+    margin-left: 1px;
+    border-radius: 25px;
+
+    span {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmates-form {
+    width: 285px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #ffd74b;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+    margin-top: 60px;
+    margin-right: 60px;
+    margin-bottom: 28px;
+    order: 2;
+  }
+
+  .travelmates-form__wrapper {
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+
+  .travelmates-form__caption {
+    @include font-parametrs(30px, #1d2e5b, 700, 30px);
+    width: 120px;
+    padding-top: 17px;
+    padding-left: 23px;
+    margin-bottom: 0;
+  }
+
+  .travelmates-form__button {
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    font-size: 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 4px;
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'%0AviewBox='0 0 10 5' style='enable-background:new 0 0 10 5;' fill='%23192144' xml:space='preserve'%3E%3Cpolygon points='5,5 0,0 10,0 '/%3E%3C/svg%3E%0A");
+      top: -38px;
+      left: 183px;
+      transition: 1s;
+      transform: rotate(360deg);
+    }
+  }
+  //Секции (общие стили)
+
+  .travelmates-form__title {
+    text-transform: uppercase;
+    width: 220px;
+    margin: 0;
+    margin-top: 18px;
+    padding-bottom: 18px;
+
+    @include font-parametrs(20px, #1d2e5b, 500, 30px);
+  }
+
+  .travelmates-form__list {
+    @include list-reset;
+    flex-direction: column;
+    margin-left: 37px;
+  }
+
+  .travelmates-form__list--show .travelmates-form__item {
+    display: block;
+  }
+
+  .travelmates-form__item {
+    padding-left: 25px;
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 34px;
+  }
+
+
+  .travelmates-form__item-label {
+    @include font-parametrs(20px, #444444, 400, 20px);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      @include wh(24px, 24px);
+      border-radius: 4px;
+      top: -4px;
+      left: -35px;
+      background: $white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      @include wh(24px, 24px);
+      background-color: $white;
+      border-radius: 4px;
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'%0AviewBox='0 0 12 12' fill='%23192144' style='enable-background:new 0 0 12 12;' xml:space='preserve'%3E%3Cpolygon points='12,0 3.8,8 0,4.3 0,8.3 3.8,12 12,4 '/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-size: 12px, 12px;
+      background-repeat: no-repeat;
+      top: -4px;
+      left: -35px;
+      display: none;
+    }
+  }
+
+  .travelmates-form__item-input:checked + .travelmates-form__item-label::before {
+    display: none;
+  }
+
+  .travelmates-form__item-input:checked + .travelmates-form__item-label::after {
+    display: block;
+  }
+
+  .travelmates-form__hobby {
+    padding: 0;
+    border-top: none;
+    padding-top: 0;
+    width: 220px;
+    padding-left: 22px;
+    flex-wrap: wrap;
+
+    .travelmates-form__item {
+      margin-bottom: 14px;
+
+      &:last-child {
+        padding-bottom: 14px;
+      }
+    }
+  }
+
+  .travelmates-form__music {
+    width: 220px;
+    margin: 0;
+    margin-top: -45px;
+    padding-left: 22px;
+    border-top: none;
+    flex-wrap: wrap;
+
+    .travelmates-form__item {
+      margin-bottom: 14px;
+    }
+  }
+
+  .travelmates-form__eat {
+    margin-top: -17px;
+    width: 220px;
+    padding-left: 23px;
+    padding-top: 12px;
+    border-top: none;
+    flex-wrap: wrap;
+  }
+
+  .travelmates-form__ways-to-travel {
+    width: 220px;
+    border-top: none;
+    margin-top: -36px;
+    padding-top: 12px;
+    padding-left: 23px;
+    flex-wrap: wrap;
+
+    .travelmates-form__list {
+      flex-direction: row;
+      margin-left: 0;
+      margin-top: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  .travelmates-form__ways-to-travel .travelmates-form__item {
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .travelmates-form__ways-to-travel .travelmates-form__item-label {
+    padding-right: 7px;
+
+    &::after {
+      @include wh(43px, 43px);
+      border-radius: 50%;
+    }
+
+    &::before {
+      @include wh(43px, 43px);
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--plane {
+      &::after {
+        top: -14px;
+        left: -28px;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' viewBox='0 0 19 21' style='enable-background:new 0 0 19 21;' xml:space='preserve'%3E%3Cpath d='M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8%0Ac-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6%0AC-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1%0Ac-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1%0Ac0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9%0Ac0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5%0Ac0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z'/%3E%3C/svg%3E");
+        background-size: 19px, 21px;
+      }
+
+      &::before {
+        top: -14px;
+        left: -28px;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 19 21' style='enable-background:new 0 0 19 21;' xml:space='preserve'%3E%3Cpath d='M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8%0Ac-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6%0AC-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1%0Ac-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1%0Ac0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9%0Ac0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5%0Ac0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z'/%3E%3C/svg%3E");
+        background-size: 19px, 21px;
+      }
+    }
+
+    &--bus {
+      &::after {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='svg2103' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b'%0AviewBox='0 0 17 21' style='enable-background:new 0 0 17 21;' xml:space='preserve'%3E%3Cpath d='M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4%0Ac0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5%0AC4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z%0AM8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9%0AH8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z'/%3E%3C/svg%3E");
+        background-size: 17px, 21px;
+        top: -14px;
+        left: -16px;
+      }
+
+      &::before {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='svg2103' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 17 21' style='enable-background:new 0 0 17 21;' xml:space='preserve'%3E%3Cpath d='M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4%0Ac0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5%0AC4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z%0AM8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9%0AH8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z'/%3E%3C/svg%3E");
+        background-size: 17px, 21px;
+        top: -14px;
+        left: -16px;
+      }
+    }
+
+    &--bike {
+      &::after {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b'%0AviewBox='0 0 24 21' style='enable-background:new 0 0 24 21;' xml:space='preserve'%3E%3Cpath d='M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5%0AS21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2%0Al-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5%0Al-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5%0As1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z'/%3E%3C/svg%3E");
+        background-size: 24px, 21px;
+        top: -14px;
+        left: -6px;
+      }
+
+      &::before {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 24 21' style='enable-background:new 0 0 24 21;' xml:space='preserve'%3E%3Cpath d='M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5%0AS21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2%0Al-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5%0Al-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5%0As1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z'/%3E%3C/svg%3E");
+        background-size: 24px, 21px;
+        top: -14px;
+        left: -6px;
+      }
+    }
+
+    &--run {
+      &::after {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Icons_Run' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b'%0AviewBox='0 0 20 21' style='enable-background:new 0 0 20 21;' xml:space='preserve'%3E%3Cg%3E%3Cellipse cx='14.3' cy='2' rx='2.1' ry='2'/%3E%3Cpath d='M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6%0AC5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5%0Ac0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4%0Ac0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6%0Az'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-size: 20px, 21px;
+        top: -14px;
+        left: 5px;
+      }
+
+      &::before {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Icons_Run' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' fill='%231d2e5b' fill-opacity='0.2'%0AviewBox='0 0 20 21' style='enable-background:new 0 0 20 21;' xml:space='preserve'%3E%3Cg%3E%3Cellipse cx='14.3' cy='2' rx='2.1' ry='2'/%3E%3Cpath d='M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6%0AC5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5%0Ac0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4%0Ac0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6%0Az'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-size: 20px, 21px;
+        top: -14px;
+        left: 5px;
+      }
+    }
+  }
+
+  .travelmates-form__range {
+    border-top: none;
+    width: 220px;
+    padding-top: 0;
+    padding-left: 23px;
+    margin-bottom: 26px;
+    margin-top: -30px;
+
+    flex-wrap: wrap;
+
+    .travelmates-form__title {
+      margin-bottom: -2px;
+    }
+  }
+
+  .travelmates-form__range-controls {
+    position: relative;
+
+    border-radius: 5px;
+    width: 190px;
+  }
+
+  .travelmates-form__range-controls .travelmates-form__scale {
+    width: 185px;
+    height: 2px;
+    background: #1d2e5b;
+  }
+
+  .travelmates-form__range-controls .travelmates-form__bar {
+    width: 70px;
+    height: 2px;
+
+    background-color: #cbced9;
+  }
+
+  .travelmates-form__price-controls {
+    margin-bottom: 34px;
+    display: flex;
+    margin-left: -63px;
+  }
+
+  .travelmates-form__min-price,
+  .travelmates-form__max-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96px;
+    height: 46px;
+    border: 1px solid #cbced9;
+    background: $white;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin-top: -13px;
+  }
+
+  .travelmates-form__min-price {
+    border-radius: 4px 0 0 4px;
+    position: relative;
+    border-right: none;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 17px;
+      background: #cbced9;
+      transform: rotate(90deg);
+      left: 87px;
+      top: 7px;
+      box-shadow: 30px 0 0 0 #cbced9;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 22px;
+      background: #cbced9;
+      left: 85px;
+      top: 22px;
+    }
+  }
+
+  .travelmates-form__max-price {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+  }
+
+  .travelmates-form__range-controls .travelmates-form__toggle-min {
+    position: absolute;
+    top: -4px;
+    left: 57px;
+
+    width: 13px;
+    height: 13px;
+    background: #1d2e5b;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 1s;
+  }
+
+  .travelmates-form__range-controls .travelmates-form__toggle-max {
+    position: absolute;
+    top: -4px;
+    left: 176px;
+    width: 13px;
+    height: 13px;
+    background: #1d2e5b;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 1s;
+  }
+
+  .travelmates-form__button-send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 196px;
+    height: 50px;
+    margin: 0 auto;
+    margin-right: 40px;
+    border: none;
+    background: $white;
+    border-radius: 25px;
+
+    span {
+      @include font-parametrs(20px, #161c35, 700, 30px);
+      text-transform: uppercase;
+    }
+  }
+}
