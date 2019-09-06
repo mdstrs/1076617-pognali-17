@@ -83,6 +83,31 @@
   &:hover {
     background-color: #edeff6;
   }
+
+  &:focus {
+    background-color: #192144;
+    border: 4px solid $white;
+  }
+
+  &::placeholder {
+    @include font-parametrs(18px, #444444, 700, 18px);
+  }
+
+  &:hover::placeholder {
+    color: #98999d;
+  }
+
+  &:focus::placeholder {
+    color: $white;
+  }
+}
+
+.cta-form__input--error {
+  background-color: #ffefef;
+
+  &::placeholder {
+    color: red;
+  }
 }
 
 .cta-form__button {
@@ -103,10 +128,6 @@
     border-width: 7px 0 7px 10px;
     border-color: transparent transparent transparent $navy-blue;
   }
-}
-
-.cta-form__input::placeholder {
-  @include font-parametrs(18px, #444, 700, 18px);
 }
 
 .cta__contacts-list {

@@ -6,48 +6,48 @@
   <title>HTML Academy: Погнали</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
     <header class="page-header page-header--closed page-header--nojs">
       <div class="page-header__inner">
-          <a class="page-header__logo--inner" href="#">
-              <picture class="page-header__logo-image">
-                <source media="(min-width: 768px)"
-                  srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-                <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-blue-white@2x.png 2x" class="header__logo-image"
-                  alt="Погнали?" />
-              </picture>
-            </a>
+        <a class="page-header__logo-hidden" href="#">
+          <picture class="page-header__logo-hidden-picture">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+              class="page-header__logo-hidden-img" alt="Погнали?" />
+          </picture>
+        </a>
 
         <a class="page-header__logo" href="#">
-          <picture class="page-header__logo-image">
+          <picture class="page-header__logo">
             <source media="(min-width: 1440px)"
               srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
             <source media="(min-width: 768px)"
               srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-            <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" class="header__logo-image"
-              alt="Погнали?" />
+            <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x"
+              class="page-header__logo-img" alt="Погнали?" />
           </picture>
         </a>
 
         <nav class="main-menu">
           <a class="main-menu__item" href="about-services.html"><span data-hover="О сервисе">О сервисе</span></a>
-          <a class="main-menu__item" href="directions.html"><span data-hover="Направления">Направления</span></a>
-          <a class="main-menu__item" href="travelers.html"><span data-hover="Попутчики">Попутчики</span></a>
+          <a class="main-menu__item" href="/form.html"><span data-hover="Направления">Направления</span></a>
+          <a class="main-menu__item" href="/catalog.html"><span data-hover="Попутчики">Попутчики</span></a>
         </nav>
+        <button type="button" class="menu-toogle"><span class="visually-hidden">Кнопка меню</span></button>
 
-        <button type="button" class="main-menu__button"><span class="visually-hidden">Кнопка меню</span></button>
-        <a class="page-header__button--login button" href="#"><span>Авторизация</span></a>
+        <a class="page-header__button button" href="#"><span>Авторизация</span></a>
 
         <ul class="contacts-list page-header__contacts-list">
           <li class="contacts-item page-header__contacts-item">
-            <a class="contacts-item--phone" href="tel:+79961300903">8 800
+            <a class="contacts-item contacts-item--phone" href="tel:+79961300903">8 800
               555-86-28</a>
           </li>
-          <li class="contacts-item page-header__contacts-item"><a class="contacts-item--mail"
+          <li class="contacts-item page-header__contacts-item"><a class="contacts-item contacts-item--mail"
               href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
         </ul>
 
@@ -85,13 +85,15 @@
           </section>
           <ul class="connection__list">
             <li class="connection__item">
-              <a class="connection__item--call button" href="#"><span class="visually-hidden">Позвоните нам</span></a>
+              <a class="connection__item connection__item--call button" href="#"><span class="visually-hidden">Позвоните
+                  нам</span></a>
             </li>
             <li class="connection__item">
-              <a class="connection__item--mail button" href="#"><span class="visually-hidden">Напишите нам</span></a>
+              <a class="connection__item connection__item--mail button" href="#"><span class="visually-hidden">Напишите
+                  нам</span></a>
             </li>
             <li class="connection__item">
-              <a class="button connection__button--login" href="#">Авторизация</a>
+              <a class="button connection__button connection__button--login" href="#">Авторизация</a>
             </li>
           </ul>
           <blockquote class="review">
@@ -138,7 +140,7 @@
             бы
             отправиться и чем можно там заняться.</p>
         </div>
-        <a href="#" class="button--more button country__button"><span>Показать все</span></a>
+        <a href="/form.html" class="button--more button country__button"><span>Показать все</span></a>
 
         <ul class="country__list">
 
@@ -149,9 +151,9 @@
               <img class="country__image" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x"
                 width="270" height="110" alt="Тайланд">
             </picture>
-            <section class="counrty__review">
-              <div class="country__review--wrapper">
-                <h3 class="country__title--review">Тайланд</h3>
+            <section class="country__review">
+              <div class="country__review-wrapper">
+                <h3 class="country__title-review">Тайланд</h3>
                 <span class="country__text">Джугли зовут!</span>
               </div>
               <span class="country__counter">18321</span>
@@ -163,9 +165,9 @@
               <source srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x" media="(min-width: 768px)">
               <img class="country__image" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Франция">
             </picture>
-            <section class="counrty__review">
-              <div class="country__review--wrapper">
-                <h3 class="country__title--review">Франция</h3>
+            <section class="country__review">
+              <div class="country__review-wrapper">
+                <h3 class="country__title-review">Франция</h3>
                 <span class="country__text">Трэ бьен, манифик!</span>
               </div>
               <span class="country__counter">12518</span>
@@ -177,9 +179,9 @@
               <source srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x" media="(min-width: 768px)">
               <img class="country__image" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия">
             </picture>
-            <section class="counrty__review">
-              <div class="country__review--wrapper">
-                <h3 class="country__title--review">Чехия</h3>
+            <section class="country__review">
+              <div class="country__review-wrapper">
+                <h3 class="country__title-review">Чехия</h3>
                 <span class="country__text">Закоулки старой Европы</span>
               </div>
               <span class="country__counter">5326</span>
@@ -197,7 +199,7 @@
 
     <section class="travelmates">
       <div class="travelmates__wrapper">
-        <div class="travelmates-text__wrapper">
+        <div class="travelmates__text-wrapper">
           <h2 class="travelmates__title">Попутчики</h2>
           <p class="travelmates__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен
             пляж
@@ -209,11 +211,11 @@
           <li class="travelmates__item">
             <img class="travelmates__image" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-destop@2x.jpg 2x"
               alt="фото пользователя" width="270" height="270">
-            <svg class="travelmates-card__level" viewBox="0 0 120 120" width="60" height="60">
+            <svg class="travelmates__level" viewBox="0 0 120 120" width="60" height="60">
               <circle r="57" cx="60" cy="60" fill-opacity="0.6" fill="#081218"></circle>
               <text x="33" y="63" style="font-size: 46px; font-weight: 600; font-height: 50px; fill:#ffffff;">99</text>
               <text x="33" y="99"
-                style="font-size: 30px; font-weight: 400; font-height: 22px; fill:#7a8083;">level</text>
+                style="font-size: 30px; font-weight: 400; font-height: 22px; fill:#ffffff;">level</text>
               <line x1="27" y1="71" x2="85" y2="71" stroke="#7e7f82" stroke-width="2"></line>
               <circle r="57" cx="60" cy="60" stroke-width="6" stroke="#ff8d30" fill="none"></circle>
               <g transform="rotate(-100 60 60)">
@@ -225,19 +227,19 @@
               <h3 class="travelmates__title visually-hidden">Хочет посетить:</h3>
               <ul class="visit-country visit-country">
                 <li class="visit-country__tooltip visit-country__tooltip--sri-lanka" data-tooltip="Шри‑ланка">
-                  <a href="#" class="visit-counry__item visit-counry__item--sri-lanka">
+                  <a href="#" class="visit-country__item visit-country__item--sri-lanka">
                     <span class="visually-hidden">Шри-ланка</span>
                     <img src="img/flag-sri-lanka.svg" alt='Шри Ланка' width="35" height="24">
                   </a>
                 </li>
                 <li class="visit-country__tooltip visit-country__tooltip--thailand" data-tooltip="Тайланд">
-                  <a href="#" class="visit-counry__item visit-counry__item--thailand">
+                  <a href="#" class="visit-country__item visit-country__item--thailand">
                     <span class="visually-hidden">Тайланд</span>
                     <img src="img/flag-thailand.svg" alt='Тайланд' width="35" height="24">
                   </a>
                 </li>
                 <li class="visit-country__tooltip visit-country__tooltip--seychelles" data-tooltip="Сейшеллы">
-                  <a href="#" class="visit-counry__item visit-counry__item--seychelles">
+                  <a href="#" class="visit-country__item visit-country__item--seychelles">
                     <span class="visually-hidden">Сейшеллы</span>
                     <img src="img/flag-seychelles.svg" alt='Сейшеллы' width="35" height="24">
                   </a>
@@ -256,12 +258,12 @@
                       style="enable-background:new 0 0 19 21;" xml:space="preserve">
                       <path
                         d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
-                    c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
-                    C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1
-                    c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1
-                    c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9
-                    c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5
-                    c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z" />
+                      c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
+                      C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1
+                      c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1
+                      c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9
+                      c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5
+                      c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z" />
                     </svg>
                   </a>
                 </li>
@@ -274,10 +276,10 @@
                       style="enable-background:new 0 0 17 21;" xml:space="preserve">
                       <path
                         d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4
-                    c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5
-                    C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z
-                    M8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9
-                    H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z" />
+                      c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5
+                      C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z
+                      M8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9
+                      H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z" />
                     </svg>
                   </a>
                 </li>
@@ -287,10 +289,10 @@
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                       x="0px" y="0px" viewBox="0 0 24 21" style="enable-background:new 0 0 24 21;" xml:space="preserve">
                       <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
-                    S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
-                    l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5
-                    l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5
-                    s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z" />
+                      S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
+                      l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5
+                      l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5
+                      s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z" />
                     </svg>
 
                   </a>
@@ -304,10 +306,10 @@
                       <g>
                         <ellipse cx="14.3" cy="2" rx="2.1" ry="2" />
                         <path d="M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6
-                    C5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5
-                    c0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4
-                    c0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6
-                    z" />
+                      C5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5
+                      c0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4
+                      c0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6
+                      z" />
                       </g>
                     </svg>
                   </a>
@@ -319,11 +321,11 @@
           <li class="travelmates__item">
             <img class="travelmates__image" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x"
               alt="фото пользователя" width="270" height="270">
-            <svg class="travelmates-card__level" viewBox="0 0 120 120" width="60" height="60">
+            <svg class="travelmates__level" viewBox="0 0 120 120" width="60" height="60">
               <circle r="57" cx="59" cy="60" fill-opacity="0.7" fill="#060e11"></circle>
               <text x="33" y="63" style="font-size: 46px; font-weight: 600; font-height: 50px; fill:#ffffff;">80</text>
               <text x="33" y="99"
-                style="font-size: 30px; font-weight: 400; font-height: 22px; fill:#7a8083;">level</text>
+                style="font-size: 30px; font-weight: 400; font-height: 22px; fill:#ffffff;">level</text>
               <line x1="27" y1="71" x2="85" y2="71" stroke="#7e7f82" stroke-width="2"></line>
               <circle r="57" cx="59" cy="60" stroke-width="6" stroke="#ff8d30" fill="none"></circle>
               <g transform="rotate(-150 59 60)">
@@ -335,13 +337,13 @@
               <h3 class="travelmates__title visually-hidden">Хочет посетить:</h3>
               <ul class="visit-country visit-country--two">
                 <li class="visit-country__tooltip visit-country__tooltip--belgium" data-tooltip="Бельгия">
-                  <a href="#" class="visit-counry__item visit-counry__item--belgium">
+                  <a href="#" class="visit-country__item visit-country__item--belgium">
                     <span class="visually-hidden">Бельгия</span>
                     <img src="img/flag-belgium.svg" alt='Бельгия' width="35" height="24">
                   </a>
                 </li>
                 <li class="visit-country__tooltip visit-country__tooltip--czech" data-tooltip="Чехия">
-                  <a href="#" class="visit-counry__item visit-counry__item--czech">
+                  <a href="#" class="visit-country__item visit-country__item--czech">
                     <span class="visually-hidden">Чехия</span>
                     <img src="img/flag-czech.svg" alt='Чехия' width="35" height="24">
                   </a>
@@ -418,7 +420,7 @@
             </section>
           </li>
         </ul>
-        <a href="#" class="button button--more travelmates__button"><span>Показать всех</span></a>
+        <a href="/catalog.html" class="button button--more travelmates__button"><span>Показать всех</span></a>
       </div>
     </section>
 
@@ -460,10 +462,10 @@
         <span class="cta__text cta__text--question">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</span>
         <ul class="contacts-list cta__contacts-list">
           <li class="contacts-item cta__contacts-item">
-            <a class="contacts-item--phone" href="tel:+79961300903">8 800
+            <a class="contacts-item contacts-item--phone" href="tel:+79961300903">8 800
               555-86-28</a>
           </li>
-          <li class="contacts-item cta__contacts-item"><a class="contacts-item--mail"
+          <li class="contacts-item cta__contacts-item"><a class="contacts-item contacts-item--mail"
               href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
         </ul>
 
@@ -492,9 +494,9 @@
       <picture class="main-footer__logo-image">
         <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
         <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
-        <img src="img/logo-mobile-blue@1x.png" class="header__logo-image" alt="Погнали?" />
+        <img src="img/logo-mobile-blue@1x.png" class="main-footer__logo-img" alt="Погнали?" />
       </picture>
-      <ul class="main-footer__social-list social__list">
+      <ul class="main-footer__social-list">
         <li class="social-item">
           <a class="social-link social-link--fb">
             <svg class="social-image social-image--fb" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -552,7 +554,7 @@
 
 
 
-      <section class="main-footer__copyright">
+      <section class="copyright">
         <ul class="copyright__list">
           <li class="copyright__item">
             <span class="copyright__text">Разработано</span>
@@ -560,7 +562,7 @@
           <li class="copyright__item copyright__logo">
             <a href="https://htmlacademy.ru/intensive/adaptive" target="blanck">
               <span class="visually-hidden">Профессиональный онлайн‑курс HTML и CSS, уровень 2</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 34">
+              <svg class="copyright__logo-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 34">
                 <path
                   d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z" />
               </svg>
@@ -571,7 +573,7 @@
     </div>
   </footer>
 
-  <section class="business-rates">
+  <section class="rates business-rates">
     <h2 class="rates__title business-rates__title">Бизнес-тарифы</h2>
     <table class="rates__table business-rates__table">
       <tr>
@@ -595,45 +597,10 @@
         окно</span></button>
   </section>
 
-
-  <script>
-    var link = document.querySelector(".rates__button");
-    var navMain = document.querySelector('.page-header');
-    var navToggle = document.querySelector('.main-menu__button');
-    var popup = document.querySelector(".business-rates");
-    var close = document.querySelector(".business-rates__button--closed");
-
-    navMain.classList.remove('page-header--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('page-header--closed')) {
-        navMain.classList.remove('page-header--closed');
-        navMain.classList.add('page-header--active');
-      } else {
-        navMain.classList.add('page-header--closed');
-        navMain.classList.remove('page-header--active');
-      }
-    });
-
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("business-rates--show");
-    });
-
-    close.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.remove("business-rates--show");
-    });
-
-    window.addEventListener("keydown", function (evt) {
-      if (evt.keyCode === 27) {
-        evt.preventDefault();
-        if (popup.classList.contains("business-rates--show")) {
-          popup.classList.remove("business-rates--show");
-        }
-      }
-    });
-  </script>
+  <script src="js/burger-menu.js"></script>
+  <script src="js/scroll-menu.js"></script>
+  <script src="js/bussines-rates.js"></script>
+  <script src="js/input-error.js"></script>
 
 </body>
 

@@ -1,3 +1,9 @@
+.catalog-main-footer {
+  .main-footer__logo-image {
+    margin-top: -9px;
+  }
+}
+
 .main-footer {
   background-color: $white;
   margin-top: -3px;
@@ -89,7 +95,6 @@
   width: 27px;
   height: 34px;
   padding-top: 14px;
-  fill: #192144;
 
   &:hover {
     opacity: 0.6;
@@ -100,15 +105,34 @@
   }
 }
 
+.copyright__logo-image {
+  fill: #192144;
+}
+
 .page-header--active .page-header__logo {
   display: none;
 }
 
+.form-main-footer {
+  position: relative;
+  z-index: 13;
+  margin-top: -10px;
+}
+
+.form-main-footer .main-footer__social-list {
+  margin-bottom: 45px;
+}
+
 @media (min-width: $tablet-width) {
   .main-footer {
-    margin-top: 0;
+    z-index: 13;
     box-sizing: border-box;
     width: 100%;
+  }
+
+  .copyright__list {
+    border-top: none;
+    width: 160px;
   }
 
   .main-footer__wrapper {
@@ -123,14 +147,15 @@
     @include wh(164px, 42px);
     margin: 0;
     padding: 0;
-    margin-top: -5px;
+    margin-top: -2px;
   }
 
   .main-footer__social-list {
     position: relative;
     z-index: 2;
     width: 180px;
-    margin-top: -5px;
+    margin-top: -1px;
+    margin-left: 90px;
     justify-content: space-between;
   }
 
@@ -157,18 +182,34 @@
     display: block;
   }
 
-  .copyright__list {
-    width: 160px;
-  }
-
   .copyright__logo {
-    margin-top: -8px;
+    margin-top: -11px;
   }
 
   .copyright__text {
     font-size: 20px;
-    margin-top: -8px;
+    margin-top: -12px;
     padding-left: 5px;
+  }
+
+  .catalog-main-footer .main-footer__logo-image {
+    margin-top: -7px;
+  }
+
+  .catalog-main-footer .main-footer__social-list {
+    margin-top: -6px;
+  }
+
+  .catalog-main-footer .copyright__logo {
+    margin-top: -15px;
+  }
+
+  .catalog-main-footer .copyright__text {
+    margin-top: -8px;
+  }
+
+  .form-main-footer .copyright__text {
+    margin-top: -3px;
   }
 }
 
@@ -180,5 +221,31 @@
   .main-footer__logo-image {
     width: 198px;
     height: 52px;
+  }
+
+  .main-footer__social-list {
+    margin-left: 371px;
+    margin-top: 0;
+  }
+
+  .copyright__list {
+    border-top: none;
+  }
+
+  .catalog-main-footer .main-footer__logo-image {
+    margin-top: -5px;
+    margin-left: 1px;
+  }
+
+  .catalog-main-footer .main-footer__social-list {
+    margin-top: 1px;
+  }
+
+  .catalog-main-footer .copyright__logo {
+    margin-top: -10px;
+  }
+
+  .catalog-main-footer .copyright__text {
+    margin-top: -2px;
   }
 }

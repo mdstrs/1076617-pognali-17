@@ -23,7 +23,7 @@
   display: none;
 }
 
-.main-menu__button {
+.menu-toogle {
   border: none;
   position: relative;
   display: block;
@@ -56,7 +56,8 @@
 }
 
 //Стили поведения main-menu при открытии
-.page-header--active .main-menu {
+.page-header--active .main-menu,
+.page-header--nojs .main-menu {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -64,7 +65,8 @@
   margin-bottom: 50px;
 }
 
-.page-header--active .main-menu__button {
+.page-header--active .menu-toogle,
+.page-header--nojs .menu-toogle {
   order: 2;
   top: 35px;
 
@@ -83,8 +85,21 @@
 
 //Каталог
 
-.page-header--catalog .main-menu__button {
-  top: 23px;
+.container--catalog .menu-toogle {
+  margin-top: -24px;
+  top: 47px;
+}
+
+.page-form .menu-toogle {
+  margin-top: -8px;
+
+  &::before {
+    top: -16px;
+  }
+
+  &::after {
+    top: -8px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -97,33 +112,31 @@
     @include font-parametrs(60px, $navy-blue, 500, 71px);
   }
 
-  .page-header .main-menu__button {
+  .page-header .menu-toogle {
     margin-top: 30px;
     margin-right: auto;
   }
 
   //Стили поведения main-menu при открытии (планшетная версия)
 
-  .page-header--active .main-menu {
+  .page-header--active .main-menu,
+  .page-header--nojs .main-menu {
     margin-left: 58px;
     order: 4;
     margin-bottom: 154px;
   }
 
-  .page-header--active .main-menu__button {
+  .page-header--active .menu-toogle,
+  .page-header--nojs .menu-toogle {
     margin-top: 29px;
   }
 }
 
 //Каталог
 
-.catalog__container .main-menu__button {
-  top: 31px;
-}
-
 @media (min-width: $desktop-width) {
   .page-header--active .main-menu,
-  .page-header .main-menu__button {
+  .page-header .menu-toogle {
     padding: 0;
     margin: 0;
     display: none;
@@ -185,5 +198,20 @@
   .main-menu__item:hover span,
   .main-menu__item:focus span {
     transform: translateY(-100%);
+  }
+
+  .fixed-header .main-menu__item {
+    color: #192144;
+  }
+
+  .fixed-header .main-menu {
+    margin-top: 33px;
+    margin-bottom: 0;
+
+    &::before {
+      background-color: #192144;
+      width: 45px;
+      left: -77px;
+    }
   }
 }

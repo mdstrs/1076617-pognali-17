@@ -24,6 +24,19 @@
 @import "blocks/main-footer.scss";
 @import "blocks/filter.scss";
 @import "blocks/alphabet.scss";
+@import "blocks/travelmates-form.scss";
+@import "blocks/traveler.scss";
+@import "blocks/profile.scss";
+@import "blocks/plans.scss";
+@import "blocks/trip.scss";
+@import "blocks/country-list.scss";
+@import "blocks/calendar.scss";
+@import "blocks/page-form.scss";
+@import "blocks/pagination.scss";
+
+.container--catalog .fixed-header {
+  display: none;
+}
 
 body {
   min-width: 320px;
@@ -37,18 +50,22 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  overflow: hidden;
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  border: 0;
+
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  clip-path: inset(100%);
 }

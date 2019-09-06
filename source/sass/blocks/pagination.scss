@@ -1,0 +1,238 @@
+.pagination {
+  position: relative;
+  padding-bottom: 89px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.pagination__list {
+  display: none;
+}
+
+.pagination-button {
+  @include list-reset;
+  display: flex;
+  width: 270px;
+  margin: 0 auto;
+}
+
+.pagination li {
+  width: 50%;
+  height: 50px;
+  background-color: $white;
+  border: none;
+
+  &:first-of-type {
+    border-radius: 20px 0 0 20px;
+  }
+
+  &:nth-of-type(2) {
+    border-radius: 0 20px 20px 0;
+  }
+}
+
+.pagination-button--back {
+  border: none;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #192144 transparent transparent;
+    top: 15px;
+    left: 63px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background: #edeff6;
+    top: 0;
+    left: 135px;
+    z-index: 99;
+  }
+
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.pagination-button--next {
+  border: none;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #192144;
+    top: 15px;
+    left: 63px;
+  }
+
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .pagination {
+    width: 688px;
+    padding-top: 14px;
+    padding-bottom: 17px;
+    border-radius: 25px;
+    margin: 0 auto;
+    background: $white;
+    min-height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .pagination__list {
+    display: flex;
+
+    @include list-reset;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 7px;
+    padding-left: 28px;
+  }
+
+  .pagination__item span {
+    @include wh(50px, 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    @include font-parametrs(20px, #161c35, 700, 30px);
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: #ffd74b;
+
+      @include wh(50px, 50px);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+  }
+
+  .pagination__item--current span {
+    background-color: #ffd74b;
+
+    @include wh(50px, 50px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    @include font-parametrs(20px, #161c35, 700, 30px);
+    text-transform: uppercase;
+  }
+
+  .pagination-button {
+    @include list-reset;
+    display: flex;
+    margin: 0;
+    margin-left: auto;
+    height: 0;
+    width: 50%;
+    background-color: $white;
+    border: none;
+  }
+
+  .pagination-button--back {
+    border-radius: 20px 0 0 20px;
+    width: 50%;
+    position: relative;
+    height: 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #192144 transparent transparent;
+      top: 27px;
+      left: 170px;
+    }
+
+    &:hover::after {
+      opacity: 0.2;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .pagination-button--next {
+    border-radius: 0 20px 20px 0;
+    position: relative;
+    height: 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #192144;
+      top: 27px;
+      left: 41px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    order: 3;
+    width: 950px;
+    margin-left: 60px;
+  }
+
+  .pagination-button--back {
+    &::after {
+      top: 26px;
+      left: 259px;
+    }
+  }
+
+  .pagination-button--next {
+    &::after {
+      top: 26px;
+      left: 65px;
+    }
+  }
+}

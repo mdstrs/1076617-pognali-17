@@ -8,6 +8,7 @@
   padding-bottom: 244px;
 }
 
+
 .page-title--catalog {
   background-color: #161c35;
   padding-bottom: 10px;
@@ -19,12 +20,14 @@
 .page-title--catalog .page-title__text {
   padding: 0;
   margin: 0 auto;
-  padding-top: 14px;
+  padding-top: 22px;
   width: 270px;
   text-align: left;
   display: block;
+
   @include font-parametrs(36px, $white, 700, 40px);
   position: relative;
+
   &::after {
     position: absolute;
     content: "";
@@ -37,9 +40,24 @@
   }
 }
 
+.page-title__return {
+  display: none;
+}
+
+.page-title--form .page-title__text {
+  &::after {
+    width: 214px;
+  }
+}
+
 .page-title--catalog .page-title__link {
   display: none;
 }
+
+.page-title--form .page-title__link {
+  display: none;
+}
+
 
 @media (min-width: $tablet-width) {
   .page-title__text {
@@ -52,7 +70,7 @@
     margin-bottom: 85px;
   }
 
-  .page-title--catalog  {
+  .page-title--catalog {
     padding-top: 32px;
     padding-bottom: 78px;
     border-radius: 0 0 60px 60px;
@@ -64,6 +82,8 @@
     font-size: 60px;
     margin-left: 74px;
     margin-right: auto;
+    margin-top: 28px;
+
     &::after {
       border-radius: 4px;
       bottom: -82px;
@@ -76,20 +96,75 @@
   .page-title--catalog .page-title__link {
     display: inline-block;
     vertical-align: middle;
+
     @include font-parametrs (20px, $white, 700, 24px);
     text-decoration: none;
-    margin-top: 25px;
-    margin-right: 135px;
+    margin-top: 61px;
+    margin-right: 28px;
     text-transform: uppercase;
   }
 
+  .page-title--catalog .page-title__return {
+    display: block;
+    width: 32px;
+    height: 16px;
+    margin-top: 62px;
+    fill: white;
+    margin-right: 75px;
+  }
+
+  .page-title--form .page-title__text {
+    &::after {
+      width: 355px;
+    }
+  }
+
+  .page-title--form .page-title__link {
+    display: none;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .page-title__text {
     margin: 0;
+    margin-left: 68px;
     padding-top: 70px;
     text-align: left;
-    padding-left: 67px;
+  }
+
+  .page-title--catalog .page-title__text {
+    margin-left: 126px;
+
+    &::after {
+      left: 0;
+    }
+  }
+
+  .page-title--form {
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-title--form .page-title__link {
+    display: none;
+  }
+
+  .page-title--catalog .page-title__link {
+    display: inline-block;
+    vertical-align: middle;
+
+    @include font-parametrs (20px, $white, 700, 24px);
+    text-decoration: none;
+    margin-top: 61px;
+    margin-right: 28px;
+    text-transform: uppercase;
+  }
+
+  .page-title--catalog .page-title__return {
+    width: 32px;
+    height: 16px;
+    margin-top: 62px;
+    fill: white;
+    margin-right: 123px;
   }
 }

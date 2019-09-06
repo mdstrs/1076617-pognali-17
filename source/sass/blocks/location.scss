@@ -60,6 +60,10 @@
   font-size: 18px;
   position: relative;
 
+  span {
+    line-height: 18px;
+  }
+
   &::after {
     position: absolute;
     content: "";

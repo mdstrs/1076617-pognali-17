@@ -157,26 +157,16 @@
 
 .travelmates {
   background-color: #192144;
-  margin-top: -20px;
+  margin-top: -59px;
   position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-    height: 30px;
-    background-color: #edeff6;
-    border-radius: 0 0 30px 30px;
-  }
+  z-index: -2;
 }
 
 .travelmates__wrapper {
   width: 270px;
   margin: 0 auto;
   padding-bottom: 1px;
+  padding-top: 30px;
 }
 
 .travelmates__title {
@@ -321,7 +311,7 @@
   padding: 0;
 }
 
-.travelmates-card__level {
+.travelmates__level {
   position: absolute;
   left: 21px;
   top: 19px;
@@ -435,23 +425,11 @@
   .travelmates {
     overflow-x: hidden;
     background-color: #192144;
-    margin-top: -11px;
-    padding-top: 71px;
+    margin-top: -60px;
+    padding-top: 41px;
     position: relative;
     z-index: 6;
     border-radius: 0 0 60px 60px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0px;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      box-sizing: border-box;
-      background-color: #edeff6;
-      border-radius: 0 0 60px 60px;
-    }
   }
 
   .travelmates__wrapper {
@@ -552,6 +530,18 @@
     }
   }
 
+  .visit-country__item {
+    background: none;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
   .travelmates__image {
     border-radius: 20px 20px 0 0;
     width: 285px;
@@ -613,10 +603,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: -11px;
-    padding-bottom: 114px;
+    padding-bottom: 112px;
   }
 
-  .travelmates-text__wrapper {
+  .travelmates__text-wrapper {
     width: 630px;
     padding: 0;
     margin: 0;
@@ -656,7 +646,7 @@
     }
 
     &:nth-child(2) .visit-country__item {
-      padding-left: 30px;
+      padding-left: 0;
     }
   }
 
@@ -698,6 +688,7 @@
 
   .travelmates__name {
     margin-top: 32px;
+
     &::before {
       width: 7px;
       height: 7px;
@@ -706,7 +697,7 @@
     }
   }
 
-  .travelmates-card__level {
+  .travelmates__level {
     left: 24px;
     top: 23px;
   }
