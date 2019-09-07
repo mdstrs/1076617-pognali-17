@@ -123,3 +123,21 @@
     margin-bottom: 0;
   }
 }
+
+@media (min-width: $mobile-width) and (max-width: 1439px) {
+  .page-header--nojs .page-header__contacts-list {
+    display: block;
+    order: 5;
+    margin-left: 61px;
+    width: 100%;
+    margin-bottom: 28px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: 1439px) {
+  .page-header--nojs .page-header__contacts-list {
+    margin-left: 148px;
+    order: 5;
+    margin-bottom: 110px;
+  }
+}

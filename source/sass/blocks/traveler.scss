@@ -39,6 +39,12 @@
   .traveler__wrapper {
     margin-top: -8px;
   }
+
+  .traveler__about {
+    &::before {
+      background-color: $status--online;
+    }
+  }
 }
 
 .traveler__about {
@@ -46,6 +52,18 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $status--offline;
+
+    @include wh(6px, 6px);
+    border-radius: 50%;
+    top: 24px;
+    right: 22px;
+  }
 }
 
 .traveler__image {
@@ -206,7 +224,7 @@
     content: "";
     width: 15px;
     height: 1px;
-    background-color:#edeff6;
+    background-color: #edeff6;
     top: 10px;
     left: -25px;
   }
@@ -218,7 +236,7 @@
     height: 1px;
     top: 10px;
     left: 105px;
-    background-color:#edeff6;
+    background-color: #edeff6;
   }
 }
 
@@ -251,10 +269,11 @@
 
 .transport__title {
   position: relative;
+
   &::after {
     position: absolute;
     content: "";
-    background-color:#edeff6;
+    background-color: #edeff6;
     width: 90px;
     height: 1px;
     top: 8px;
@@ -266,7 +285,7 @@
     content: "";
     width: 15px;
     height: 1px;
-    background-color:#edeff6;
+    background-color: #edeff6;
     top: 8px;
     left: -25px;
   }
@@ -274,12 +293,13 @@
 
 .level__title {
   position: relative;
+
   &::after {
     position: absolute;
     content: "";
     width: 20px;
     height: 1px;
-    background-color:#edeff6;
+    background-color: #edeff6;
     top: 8px;
     right: -13px;
   }
@@ -452,6 +472,12 @@
   }
 
   .traveler__item--demin {
+    .traveler__about {
+      &::before {
+        right: 42px;
+      }
+    }
+
     .traveler__button {
       margin-top: -64px;
     }
@@ -466,6 +492,12 @@
   }
 
   .traveler__item--smolov {
+    .traveler__about {
+      &::before {
+        right: 23px;
+      }
+    }
+
     .traveler__button {
       margin-top: -63px;
     }
@@ -480,6 +512,12 @@
   }
 
   .traveler__item--rogovaya {
+    .traveler__about {
+      &::before {
+        right: -13px;
+      }
+    }
+
     .traveler__button {
       margin-top: -63px;
     }
@@ -497,6 +535,12 @@
     order: 1;
     width: 71%;
     margin-right: auto;
+
+    &::before {
+      @include wh(7px, 7px);
+      top: 44px;
+      right: 13px;
+    }
   }
 
   .traveler__image {
@@ -540,7 +584,7 @@
     &::after {
       position: absolute;
       content: "";
-      background-color:#edeff6;
+      background-color: #edeff6;
       width: 30px;
       height: 1px;
       top: 8px;
@@ -552,7 +596,7 @@
       content: "";
       width: 15px;
       height: 1px;
-      background-color:#edeff6;
+      background-color: #edeff6;
       top: 8px;
       left: -25px;
     }
@@ -706,12 +750,13 @@
 
   .wish-country__title {
     margin-left: 83px;
+
     &::before {
       position: absolute;
       content: "";
       width: 100px;
       height: 1px;
-      background-color:#edeff6;
+      background-color: #edeff6;
       top: 10px;
       left: -115px;
     }
@@ -723,7 +768,7 @@
       height: 1px;
       top: 10px;
       left: 105px;
-      background-color:#edeff6;
+      background-color: #edeff6;
     }
   }
 
@@ -776,8 +821,27 @@
     margin-bottom: 28px;
   }
 
+  .traveler__about {
+    order: 1;
+    width: 66%;
+    margin-right: auto;
+
+    &::before {
+      top: 57px;
+      right: 302px;
+    }
+  }
+
+
   .traveler__item--demin {
     margin-bottom: 28px;
+
+    .traveler__about {
+      &::before {
+        top: 57px;
+        right: 302px;
+      }
+    }
 
     .traveler__button {
       margin-top: -97px;
@@ -795,6 +859,13 @@
   .traveler__item--smolov {
     margin-bottom: 30px;
 
+    .traveler__about {
+      &::before {
+        top: 57px;
+        right: 302px;
+      }
+    }
+
     .traveler__button {
       margin-top: -97px;
     }
@@ -811,6 +882,13 @@
   .traveler__item--rogovaya {
     padding-bottom: 0;
 
+    .traveler__about {
+      &::before {
+        top: 57px;
+        right: 302px;
+      }
+    }
+
     .traveler__button {
       margin-top: -97px;
     }
@@ -826,12 +904,6 @@
 
   .traveler__avatar {
     height: 285px;
-  }
-
-  .traveler__about {
-    order: 1;
-    width: 66%;
-    margin-right: auto;
   }
 
   .traveler__image {

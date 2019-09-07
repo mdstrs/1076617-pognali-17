@@ -472,6 +472,8 @@
 
   .country__image {
     width: 213px;
+    position: relative;
+    z-index: 1;
   }
 
   .country__title {
@@ -510,6 +512,22 @@
     &::after {
       top: 34px;
       left: 228px;
+    }
+  }
+
+  .country__item:last-child {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 99;
+      width: 630px;
+      height: 55px;
+      box-shadow: inset 0 -35px 20px 0 #edeff6;
+      display: block;
+      bottom: 0;
+      left: 0;
     }
   }
 }

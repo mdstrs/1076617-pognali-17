@@ -67,3 +67,26 @@
     padding: 0;
   }
 }
+
+@media (min-width: $mobile-width) and (max-width: 1439px) {
+  .page-header--nojs .social-list {
+    @include list-reset;
+    width: 105px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 42px;
+  }
+
+  .page-header--nojs .page-header__social-list {
+    order: 6;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: 1439px) {
+  .page-header--nojs .page-header__social-list {
+    margin-left: 83px;
+    width: 139px;
+  }
+}
